@@ -13,8 +13,15 @@ class ViewController: UIViewController {
     //Mark
 
     
+    @IBOutlet weak var molecularWeightTextField: UITextField!
     
+    @IBOutlet weak var dryBulbTemperatureTextField: UITextField!
     
+    @IBOutlet weak var staticPressureTextField: UITextField!
+    
+    @IBOutlet weak var elevationAboveSealevelTextField: UITextField!
+    
+    @IBOutlet weak var wetBulbTemperatureTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var widthTextField: UITextField!
 
@@ -24,13 +31,27 @@ class ViewController: UIViewController {
     @IBAction func clearButton(_ sender: UIButton) {
         widthTextField.text=""
         heightTextField.text=""
+        molecularWeightTextField.text=""
+        dryBulbTemperatureTextField.text=""
+        staticPressureTextField.text=""
+        elevationAboveSealevelTextField.text=""
+        wetBulbTemperatureTextField.text=""
+        
+        
     }
     @IBAction func calculateButton(_ sender: UIButton) {
+        //if(verifyInput()){
         let width = Double(widthTextField.text!)
         let height = Double(heightTextField.text!)
         let area = width!*height!
         areaLabel.text=String(area)
-    }
+        }
+    
+    
+
+    
+    
+    
     
     
     //Unit Labels
