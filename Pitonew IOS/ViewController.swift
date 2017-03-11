@@ -66,11 +66,34 @@ class ViewController: UIViewController {
         var dynamicVelocityArray:[Double]()
         for item in dynamicPressureArray {
         dynamicVelocityArray.append(pilotTubeCoeffecient!*pow(2*item*1000/4.01864/gasDensity!,0.5)
-            }
+         }
+         let averageVelocity = average(dynamicVelocityArray)
+         let actualAirFlow= averageVelocity!*area!*3600
+         let normalAirFlow = actualAirFlow!*ductPressure!/101.325*273.15/(273.15+((dryBulbTemperature!-32)/1.8));
+            
+
+     
 
         
         areaLabel.text=String(area)
         }
+        
+        
+    func average(nums: [Double]) -> Double {
+
+        var total = 0.0
+        //use the parameter-array instead of the global variable votes
+        for vote in nums{
+
+            total += Double(vote)
+
+        }
+
+        let votesTotal = Double(nums.count)
+        var average = total/votesTotal
+        return average
+    }
+
     
     
 
