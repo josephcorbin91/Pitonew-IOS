@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation //Generic
+import UIKit      //iOS
+import Cocoa      //OS X
 
 class ViewController: UIViewController {
     
@@ -29,6 +32,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var areaLabel: UILabel!
     @IBAction func clearButton(_ sender: UIButton) {
+        //Clear text fields
         widthTextField.text=""
         heightTextField.text=""
         molecularWeightTextField.text=""
@@ -36,14 +40,35 @@ class ViewController: UIViewController {
         staticPressureTextField.text=""
         elevationAboveSealevelTextField.text=""
         wetBulbTemperatureTextField.text=""
+        seaLevelPressureTextField.text=""
+        pilotTubeCoeffecient.text=""
         
+        //Clear Edit Texts
         
     }
     @IBAction func calculateButton(_ sender: UIButton) {
         //if(verifyInput()){
+        var dynamicPressureArray:[Double] = [10, 20, 30]
+      
         let width = Double(widthTextField.text!)
         let height = Double(heightTextField.text!)
+        let seaLevelPressure = Double(seaLevelPressureTextField.text!)
+        let elevationAboveSealevel = Double(elevationAboveSealevelTextField.text!)
+        let staticPressure = Double(staticPressureTextField.text!)
+        let dryBulbTemperature = Double(dryBulbTemperatureTextField.text!)
+        let molecularWeight = Double(molecularWeight.text!)
+        let pilotTubeCoeffecient = Double(pilotTubeCoeffecient.text!)
         let area = width!*height!
+        let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696 *elevationAboveSealevel!);
+        let ductPressure = atmosphericPressure! + staticPressure!*0.
+        let gasDensity = 1000 * ductPressure! / (273.15 + dryBulbTemperature!) / (8314.3 / molecularWeight!)
+        
+        var dynamicVelocityArray:[Double]()
+        for item in dynamicPressureArray {
+        dynamicVelocityArray.append(pilotTubeCoeffecient!*pow(2*item*1000/4.01864/gasDensity!,0.5)
+            }
+
+        
         areaLabel.text=String(area)
         }
     
