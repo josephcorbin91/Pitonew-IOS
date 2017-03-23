@@ -15,6 +15,7 @@
 		0B399A171E62338000A1933C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B399A151E62338000A1933C /* LaunchScreen.storyboard */; };
 		0B399A221E62338000A1933C /* Pitonew_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B399A211E62338000A1933C /* Pitonew_IOSTests.swift */; };
 		0B399A2D1E62338000A1933C /* Pitonew_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B399A2C1E62338000A1933C /* Pitonew_IOSUITests.swift */; };
+		90CBC5BC1E8391C100842B30 /* ResultsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CBC5BB1E8391C100842B30 /* ResultsStoryBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0B399A281E62338000A1933C /* Pitonew IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitonew IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B399A2C1E62338000A1933C /* Pitonew_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitonew_IOSUITests.swift; sourceTree = "<group>"; };
 		0B399A2E1E62338000A1933C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90CBC5BB1E8391C100842B30 /* ResultsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ResultsStoryBoard.storyboard; path = ../ResultsStoryBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		0B399A081E62338000A1933C /* Pitonew IOS */ = {
 			isa = PBXGroup;
 			children = (
+				90CBC5BB1E8391C100842B30 /* ResultsStoryBoard.storyboard */,
 				0B399A091E62338000A1933C /* AppDelegate.swift */,
 				0B399A0B1E62338000A1933C /* ViewController.swift */,
 				0B399A0D1E62338000A1933C /* Main.storyboard */,
@@ -237,6 +240,7 @@
 			files = (
 				0B399A171E62338000A1933C /* LaunchScreen.storyboard in Resources */,
 				0B399A141E62338000A1933C /* Assets.xcassets in Resources */,
+				90CBC5BC1E8391C100842B30 /* ResultsStoryBoard.storyboard in Resources */,
 				0B399A0F1E62338000A1933C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +513,7 @@
 				0B399A331E62338000A1933C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B399A341E62338000A1933C /* Build configuration list for PBXNativeTarget "Pitonew IOSTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				0B399A361E62338000A1933C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B399A371E62338000A1933C /* Build configuration list for PBXNativeTarget "Pitonew IOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				0B399A391E62338000A1933C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
