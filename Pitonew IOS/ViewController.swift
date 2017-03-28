@@ -14,22 +14,28 @@ import UIKit      //iOS
 class ViewController: UIViewController {
     
     //Mark
-
-    
     @IBOutlet weak var molecularWeightTextField: UITextField!
-    
     @IBOutlet weak var dryBulbTemperatureTextField: UITextField!
-    
     @IBOutlet weak var staticPressureTextField: UITextField!
-    
     @IBOutlet weak var elevationAboveSealevelTextField: UITextField!
-    
     @IBOutlet weak var wetBulbTemperatureTextField: UITextField!
     @IBOutlet weak var pitotTubeCoeffecientTextField: UITextField!
     @IBOutlet weak var pressureAtSealevelTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var widthTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
+    
+    //Switch 
+    @IBOutlet var unitSwitch: UISwitch!
+    
+    func stateChanged(switchState: UISwitch){
+        if switchState.isOn{
+            areaLabel.text = "On"
+        }
+        else{
+            areaLabel.text = "Off"
+        }
+    }
     
     
     //Labels
@@ -249,14 +255,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var wetBulbUnitLabel: UILabel!
     
-    @IBOutlet weak var unitSwitch: UISwitch!
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       /* unitSwitch.addTarget(self, action: Selector("stateChanged:"), for: UIControlEvents.valueChanged)
-        */
-    }
+        unitSwitch.addTarget(self, action: Selector("stateChanged:"), for: UIControlEvents.valueChanged)
+        }
 
     
 }
