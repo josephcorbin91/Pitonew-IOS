@@ -44,15 +44,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var gasDensityLabel: UILabel!
     @IBAction func clearButton(_ sender: UIButton) {
         //Clear text fields
-        widthTextField.text=""
-        heightTextField.text=""
-        molecularWeightTextField.text=""
-        dryBulbTemperatureTextField.text=""
-        staticPressureTextField.text=""
-        elevationAboveSealevelTextField.text=""
-        wetBulbTemperatureTextField.text=""
-        pressureAtSealevelTextField.text=""
-        pitotTubeCoeffecientTextField.text=""
+        widthTextField.text="1"
+        heightTextField.text="1"
+        molecularWeightTextField.text="28.96"
+        dryBulbTemperatureTextField.text="1"
+        staticPressureTextField.text="1"
+        elevationAboveSealevelTextField.text="1"
+        wetBulbTemperatureTextField.text="1"
+        pressureAtSealevelTextField.text="1"
+        pitotTubeCoeffecientTextField.text="1"
         
         //Clear labels
         averageVelocityLabel.text="Average Velocity : "
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     }
     @IBAction func calculateButton(_ sender: UIButton) {
         //if(verifyInput()){
-        var dynamicPressureArray:[Double] = [10, 20, 30]
+        var dynamicPressureArray:[Double] = [1]
       
         let width = Double(widthTextField.text!)
         let height = Double(heightTextField.text!)
@@ -102,15 +102,15 @@ class ViewController: UIViewController {
      
 
         
-        averageVelocityLabel.text=String(averageVelocity)
-        massAirFlowLabel.text=String(massAirFlow)
-        actualAirFlowLabel.text=String(actualAirFlow)
-        normalAirFlowLabel.text=String(normalAirFlow)
-        ductPressureLabel.text=String(ductPressure)
-        areaLabel.text=String(area)
+        averageVelocityLabel.text="Average Velocity : " + String(averageVelocity)
+        massAirFlowLabel.text="Mass Air Flow : "+String(massAirFlow)
+        actualAirFlowLabel.text="Actual Air Flow : " + String(actualAirFlow)
+        normalAirFlowLabel.text="Normal Air Flow : " + String(normalAirFlow)
+        ductPressureLabel.text="Duct Pressure : " + String(ductPressure)
+        areaLabel.text="Area : " + String(area)
         relativeHumidityLabel.text=String()
-        atmosphericPressureLabel.text=String(atmosphericPressure)
-       gasDensityLabel.text=String(gasDensity)
+        atmosphericPressureLabel.text="Atmospheric Pressure : " + String(atmosphericPressure)
+       gasDensityLabel.text="Gas Density : " + String(gasDensity)
         
         }
         
