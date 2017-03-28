@@ -70,6 +70,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func calculateButton(_ sender: UIButton) {
+        
         //if(verifyInput()){
         var dynamicPressureArray:[Double] = [1]
       
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
         let seaLevelPressure = Double(pressureAtSealevelTextField.text!)
         let molecularWeight = Double(molecularWeightTextField.text!)
                             
-        
+          // if(currentUnits = SI){
         let area = width!*height!
         let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
         let ductPressure = atmosphericPressure + staticPressure!*0.249088
@@ -97,11 +98,26 @@ class ViewController: UIViewController {
          let actualAirFlow = averageVelocity*area*3600
          let massAirFlow=actualAirFlow*gasDensity/3600;
          let normalAirFlow = actualAirFlow*ductPressure/101.325*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
-            
-
-     
+        /*
+//}
+			//else if(currentUnits = US){
+        let area = width!*height!
+        let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!)
+        let ductPressure = atmosphericPressure + staticPressure!* 0.07355
+		let gasDensity = 0.062428*(1000 * (ductPressure*3.386375) / (273.15 + ((dryBulbTemperature!-32)*(5/9))) / (8314.3 / molecularWeight!));
 
         
+        var dynamicVelocityArray = [Double]()
+        for item in dynamicPressureArray {
+        dynamicVelocityArray.append(3.28084 * pilotTubeCoeffecient!*pow(2*item*1000/4.01864/(gasDensity/0.062428),0.5))
+        }
+         let averageVelocity = average(nums: dynamicVelocityArray)
+         let actualAirFlow = averageVelocity*area*3600
+         let massAirFlow=(actualAirFlow*60/pow((39.3701/12),3)*(gasDensity/0.062428)/3600)*2.2046*60
+         let normalAirFlow= (actualAirFlow*60/(pow(39.3701/12,3))*(ductPressure/0.2953)/101.325)*273.15/(273.15+dryBulbTemperature!) /60*pow((39.3701/12),3)*(294.26/273.15);
+
+		 }
+        */
         averageVelocityLabel.text="Average Velocity : " + String(averageVelocity)
         massAirFlowLabel.text="Mass Air Flow : "+String(massAirFlow)
         actualAirFlowLabel.text="Actual Air Flow : " + String(actualAirFlow)
@@ -133,7 +149,87 @@ class ViewController: UIViewController {
     
     
 
-    
+      
+    /*
+    @IBAction func unitSwitch(_ sender: Any) {
+        if ([self.unitSwitch isOn]) {
+		
+		
+			//Change Units Input
+			heightUnitLabel.text = "m"
+            widthUnitLabel.text = "m"
+			dryBulbTemperatureUnitLabel.text = "°C"
+			wetBulbUnitLabel.text = "°C"
+			elevationUnitLabel.text = "ft"
+			staticPressureUnitLable.text = "kPa"
+			
+			//Change Units Results
+			 unitsAverageVelocity.text = "m/s";
+             unitsMassAirFlow.text = "kg/s";
+			 unitsNormalAirFlow.text = "Nm³/h";
+			 unitsActualAirFlow.text = "m³/h";
+			 unitsDuctPressure.text = "kPa";
+			 UnitsMolarWeight.text = "g/mol";
+			 unitsCalculatedGasDensity.text = "kg/m³";
+			 unitsAtmosphericPressureTextView.text = "kPa";
+			 unitsAreaTextView.text = "m²";
+			 unitsDynamicVelocityTextView.text = "m/s";
+
+			  averageVelocityResultLabel.text = String(Double(averageVelocityResultLabel.text!)*12/39.3701)
+              massAirFlowResultLabel.text = String(Double(massAirFlowResultLabel.text!)/(2.2046*60))
+              normalAirFlowResultLabel.text = String(Double(normalAirFlowResultLabel.text!)*60/((pow(39.3701/12,3)*(294.26/273.15))))
+              actualAirFlowResultLabel.text = String(Double(actualAirFlowResultLabel.text!)*60/(pow(39.3701/12,3)))
+              ductPressureFragmentLabel.text = String(Double(ductPressureFragmentLabel.text!)*3.38639)
+              gasDesnityResultLabel.text = String(Double(gasDesnityResultLabel.text!)*16.018463))
+              atmosphericPressureLabel.text = String(Double(atmosphericPressureLabel.text!)*3.38639)
+              ductAreaGasFlowFragmentLabel.text = String(Double.valueOf(ductAreaGasFlowFragmentLabel.text!) * 0.00064516)
+
+
+
+                    
+			
+            [self.unitSwitch setOn:NO animated:YES];
+        } else {
+			
+		    heightUnitLabel.text = "inches"
+            widthUnitLabel.text = "inches"
+			dryBulbTemperatureUnitLabel.text = "°F"
+			wetBulbUnitLabel.text = "°F"
+			elevationUnitLabel.text = "ft"
+			staticPressureUnitLable.text = "in. Hg"
+		
+			//Change Units Results
+			 unitsAverageVelocity.text = "ft/s";
+             unitsMassAirFlow.text = "lb/min";
+			 unitsNormalAirFlow.text = "ACFM";
+			 unitsActualAirFlow.text = "SCFM";
+			 unitsDuctPressure.text = "in. Hg";
+			 UnitsMolarWeight.text = "g/mol";
+			 unitsCalculatedGasDensity.text = "lb/ft³";
+			 unitsAtmosphericPressureTextView.text = "in. Hg";
+			 unitsAreaTextView.text = "in²";
+			 unitsDynamicVelocityTextView.text = "ft/s";
+			 
+			  averageVelocityResultLabel.text = String(Double(averageVelocityResultLabel.text!)*39.3701/12)
+              massAirFlowResultLabel.text = String(Double(massAirFlowResultLabel.text!)*2.2046*60)
+              normalAirFlowResultLabel.text = String(Double(normalAirFlowResultLabel.text!)*(pow(39.3701/12,3)*(294.26/273.15)/60))
+              actualAirFlowResultLabel.text = String(Double(actualAirFlowResultLabel.text!)/60*(pow(39.3701/12,3)))
+              ductPressureFragmentLabel.text = String(Double(ductPressureFragmentLabel.text!)/3.38639)
+              gasDesnityResultLabel.text = String(Double(gasDesnityResultLabel.text!)/16.018463))
+              atmosphericPressureLabel.text = String(Double(atmosphericPressureLabel.text!)/3.38639)
+              ductAreaGasFlowFragmentLabel.text = String(Double.valueOf(ductAreaGasFlowFragmentLabel.text!) / 0.00064516)
+
+			 
+
+
+			
+			
+			
+            [self.unitSwitch setOn:YES animated:YES];
+        }
+    }
+	*/
+
     
     
     
@@ -154,37 +250,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var wetBulbUnitLabel: UILabel!
     
     @IBOutlet weak var unitSwitch: UISwitch!
-    
-    /*
-    @IBAction func unitSwitch(_ sender: Any) {
-        if ([self.unitSwitch isOn]) {
-            self.widthUnitLabel.text = "m"
-            [self.unitSwitch setOn:NO animated:YES];
-        } else {
-            self.widthUnitLabel.text = "f";
-            [self.unitSwitch setOn:YES animated:YES];
-        }
-    }
-    
-    
-    - (void)stateChanged:(UISwitch *)switchState
-    {
-    if ([switchState isOn]) {
-    self.myTextField.text = @"The Switch is On";
-    } else {
-    self.myTextField.text = @"The Switch is Off";
-    }
-    }
  
-    //Properties
-    func stateChanged(switchState: UISwitch) {
-        if unitSwitch.isOn {
-            widthUnitLabel.text = "m"
-        } else {
-            heightUnitLabel.text = "f"
-        }
-    }
- */
     override func viewDidLoad() {
         super.viewDidLoad()
         
