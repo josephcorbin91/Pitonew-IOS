@@ -95,7 +95,7 @@
                                 <rect key="frame" x="64" y="20" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="unitSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="aDg-zs-IXG"/>
+                                    <action selector="unitSwitchClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="KHY-Bz-53A"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ese-nR-92c">
@@ -298,17 +298,11 @@
                                 <rect key="frame" x="257" y="20" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDk-Lt-MMa"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWJ-lN-yJw">
                                 <rect key="frame" x="144" y="20" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zix-sO-7bd"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standard Air" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOF-46-y5F">
                                 <rect key="frame" x="16" y="776" width="100" height="30"/>
@@ -317,41 +311,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="za8-sz-qqM">
-                                <rect key="frame" x="144" y="776" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="actualAirFlowLabel" destination="asj-vD-i4T" id="yV2-6b-9It"/>
-                        <outlet property="areaLabel" destination="ckB-hf-i4u" id="DGj-Iz-5T2"/>
-                        <outlet property="atmosphericPressureLabel" destination="Lnd-hx-pUx" id="3HC-K7-3eT"/>
-                        <outlet property="averageVelocityLabel" destination="ykQ-gg-RkN" id="6c4-iD-Hen"/>
-                        <outlet property="dryBulbTemperatureTextField" destination="XhH-46-kJZ" id="poJ-kb-RqF"/>
-                        <outlet property="dryBulbTemperatureUnitLabel" destination="Ieh-uZ-4Wo" id="jMK-9C-p1n"/>
-                        <outlet property="ductPressureLabel" destination="Rvj-Ob-Svs" id="ZH0-Ue-939"/>
-                        <outlet property="elevationAboveSealevelTextField" destination="Gpm-ta-i0w" id="Ess-Ng-v3e"/>
-                        <outlet property="elevationUnitLabel" destination="yaY-n6-QHz" id="SlS-Zm-78v"/>
-                        <outlet property="gasDensityLabel" destination="UOv-gy-vdG" id="68r-a7-Zb5"/>
-                        <outlet property="heightTextField" destination="fcA-pn-P6l" id="mA0-gU-LQs"/>
-                        <outlet property="heightUnitLabel" destination="d2g-7y-fhe" id="gAs-Ir-BkF"/>
-                        <outlet property="massAirFlowLabel" destination="hbi-Ya-mG0" id="Xtj-5Q-LOa"/>
-                        <outlet property="molecularWeightTextField" destination="D50-h5-dxc" id="2WX-1c-D1n"/>
-                        <outlet property="molecularWeightUnitLabel" destination="EfV-hy-ex9" id="THH-Nj-Dfh"/>
-                        <outlet property="normalAirFlowLabel" destination="KUt-3B-ftY" id="RQJ-iS-KG4"/>
-                        <outlet property="pitotTubeCoeffecientTextField" destination="GeI-M7-ydI" id="BUV-wR-coj"/>
-                        <outlet property="pressureAtSealevelTextField" destination="wBU-8v-oIn" id="8nU-Yz-Xan"/>
-                        <outlet property="relativeHumidityLabel" destination="xdO-lD-Ifg" id="1Nr-Yx-hDU"/>
-                        <outlet property="staticPressureTextField" destination="LLN-Ba-WeO" id="V0K-UO-LYa"/>
-                        <outlet property="staticPressureUnitLable" destination="auD-1M-OrE" id="N1T-py-4Dp"/>
-                        <outlet property="titleLabel" destination="xma-Jk-tNg" id="xgN-X8-uml"/>
-                        <outlet property="unitSwitch" destination="Ao4-I8-p4U" id="fUo-bA-gi5"/>
-                        <outlet property="wetBulbTemperatureTextField" destination="GeI-M7-ydI" id="sLR-Yy-lHV"/>
-                        <outlet property="wetBulbUnitLabel" destination="TJW-ep-6ds" id="Tk6-IW-qeW"/>
-                        <outlet property="widthTextField" destination="3Zu-um-JAy" id="FXo-Td-C8n"/>
-                        <outlet property="widthUnitLabel" destination="ese-nR-92c" id="ZzJ-9L-cWs"/>
+                        <outlet property="UnitSwitch" destination="Ao4-I8-p4U" id="qZX-8I-lNC"/>
+                        <outlet property="widthUnitLabel" destination="ese-nR-92c" id="8ng-Jl-nDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
