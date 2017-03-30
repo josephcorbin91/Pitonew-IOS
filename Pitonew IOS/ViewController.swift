@@ -95,22 +95,66 @@ class ViewController: UIViewController {
         let massAirFlow=actualAirFlow*gasDensity/3600;
         let normalAirFlow = actualAirFlow*ductPressure/101.325*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
         
-        areaResultLabel.text = String(area)
-        averageVelocityResultLabel.text = String(averageVelocity)
-        normalAirFlowResultLabel.text = String(normalAirFlow)
-        atmosphericPressureResultLabel.text = String(atmosphericPressure)
-        massAirFlowResultLabel.text = String(massAirFlow)
-        actualAirFlowResultLabel.text = String(actualAirFlow)
-        ductPressureResultLabel.text = String(ductPressure)
-        gasDensityResultLabel.text = String(gasDensity)
+        
+        
+        
+        let numberTwoDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 2
+            nf.maximumFractionDigits = 2
+            return nf
+        }()
+        
+        let numberThreeDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 3
+            nf.maximumFractionDigits = 3
+            return nf
+        }()
+        
+        
+        let numberFourDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 4
+            nf.maximumFractionDigits = 4
+            return nf
+        }()
+        areaResultLabel.text =  numberThreeDigitsFomatter.string(from: area as NSNumber)
+        averageVelocityResultLabel.text = numberTwoDigitsFomatter.string(from: averageVelocity as NSNumber)
+        normalAirFlowResultLabel.text = String(Int(normalAirFlow))
+        atmosphericPressureResultLabel.text = numberTwoDigitsFomatter.string(from: atmosphericPressure as NSNumber)
+        massAirFlowResultLabel.text = numberTwoDigitsFomatter.string(from: massAirFlow as NSNumber)
+        actualAirFlowResultLabel.text = String(Int(actualAirFlow))
+        ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: ductPressure as NSNumber)
+        gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: gasDensity as NSNumber)
         
 
     
     }
+    /*
+    func formatNumber(value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2;
+        let result = formatter
+    }
     
-    
+    */
     
     @IBAction func unitSwitchClicked(_ sender: Any) {
+        var width = Double(widthTextField.text!)
+        var height = Double(heightTextField.text!)
+        var pilotTubeCoeffecient = Double(pitotTubeCoeffecientTextField.text!)
+        var staticPressure = Double(staticPressureTextField.text!)
+        var dryBulbTemperature = Double(dryBulbTemperatureTextField.text!)
+        var elevationAboveSealevel = Double(elevationAboveSeaLevelTextField.text!)
+        var wetBulbTemperature = Double(wetBulbTemperatureTextField.text!)
+        var seaLevelPressure = Double(pressureAtSeaLevelTextField.text!)
+        var molecularWeight = Double(molecularWeightTextField.text!)
+        
         if UnitSwitch.isOn{
             widthUnitLabel.text = "m"
             heightUnitLabel.text = "m"
@@ -125,8 +169,7 @@ class ViewController: UIViewController {
             massAirFlowUnitLabel.text = "kg/s"
             actualAirFlowUnitLabel.text = "m^3/h"
             normalAirFlowUnitLabel.text = "Nm^3/h"
-            
-        
+            widthTextField.text = String(width! * 3)
         }
         else{
             widthUnitLabel.text = "ft"
@@ -142,6 +185,8 @@ class ViewController: UIViewController {
             massAirFlowUnitLabel.text = "kg/s"
             actualAirFlowUnitLabel.text = "ACFM"
             normalAirFlowUnitLabel.text = "SCFM"
+            widthTextField.text = String(width! / 3)
+            
             
         }
         

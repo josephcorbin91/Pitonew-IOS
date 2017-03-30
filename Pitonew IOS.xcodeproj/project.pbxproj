@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0B399A061E62338000A1933C /* Pitonew IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitonew IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B399A091E62338000A1933C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B399A0B1E62338000A1933C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B399A0B1E62338000A1933C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		0B399A0E1E62338000A1933C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B399A111E62338000A1933C /* Pitonew_IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pitonew_IOS.xcdatamodel; sourceTree = "<group>"; };
 		0B399A131E62338000A1933C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
