@@ -114,6 +114,7 @@ class ViewController: UIViewController {
         let criticalTemperatureH20 = 1165.67;
         let pressMmHg=754.30;
         var humidityH20DryAir:Double
+        /*
         if(wetBulbSwitch.isOn){
             if(UnitSwitch.isOn){
                 dryBulbRankine = (dryBulbTemperature! * 1.8 + 32)  + 459.67
@@ -129,6 +130,7 @@ class ViewController: UIViewController {
             dryBulbWaterSaturationPressurePD = criticalPressureH20 * pow(10, Kd * (1 - (criticalTemperatureH20 / dryBulbRankine)));
             wetBulbWaterSaturationPressurePW = criticalPressureH20 * pow(10, Kw * (1 - (criticalTemperatureH20 / wetBulbRankine)));
             partialWaterPressureDueToDepressionPM = 0.000367 * (1 + ((wetBulbRankine-459.67) - 32) / 1571) * (pressMmHg - wetBulbWaterSaturationPressurePW) * ((dryBulbRankine - 459.67) - (wetBulbRankine - 459.67));
+         
             if((wetBulbWaterSaturationPressurePW - partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD> = 100 || (wetBulbWaterSaturationPressurePW -  partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD < 0){
             print("ERROR")
             }
@@ -148,6 +150,7 @@ class ViewController: UIViewController {
             humidityH20DryAir = (18.02 / dryMolecularWeight) * (partialPressureOfWaterPA / (pressMmHg - partialPressureOfWaterPA))
            
          }
+ */
         let area = width!*height!
         let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
         let ductPressure = atmosphericPressure + staticPressure!*0.249088
