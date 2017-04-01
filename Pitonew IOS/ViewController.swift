@@ -30,6 +30,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var ductPressureUnitLabel: UILabel!
     @IBOutlet weak var gasDensityUnitLabel: UILabel!
     
+    
+    //Switch
+    @IBOutlet weak var AirCompositionSwitch: UISwitch!
+    @IBOutlet weak var wetBulbSwitch: UISwitch!
+    @IBOutlet weak var pipeShapeSwitch: UISwitch!
+    
+    
     //Results
     @IBOutlet weak var averageVelocityResultLabel: UILabel!
     @IBOutlet weak var areaResultLabel: UILabel!
@@ -55,6 +62,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var pitotTubeCoeffecientTextField: UITextField!
     @IBOutlet weak var pressureAtSeaLevelTextField: UITextField!
     
+    @IBOutlet weak var CO2TextField: UITextField!
+    
+    @IBOutlet weak var ArTextField: UITextField!
+    @IBOutlet weak var N2TextField: UITextField!
+    @IBOutlet weak var H20TextField: UITextField!
+    
+    @IBOutlet weak var O2TextField: UITextField!
     //Area 
     
     func average(nums: [Double]) -> Double {
@@ -79,8 +93,61 @@ class ViewController: UIViewController {
         let wetBulbTemperature = Double(wetBulbTemperatureTextField.text!)
         let seaLevelPressure = Double(pressureAtSeaLevelTextField.text!)
         let molecularWeight = Double(molecularWeightTextField.text!)
-        
-        
+        let C02Composition = Double(CO2TextField.text!)
+        let O2Composition = Double(O2TextField.text!)
+        let N2Composition = Double(N2TextField.text!)
+        let ARComposition = Double(ArTextField.text!)
+        let H2OComposition = Double(H20TextField.text!)
+        var relativeHumidity: Double
+        var dryBulbRankine: Double
+        var wetBulbRankine: Double
+        var Kd: Double
+        var humidityH20WetAir: Double
+        var Kw: Double
+        var dryMolecularWeight: Double
+        var partialPressureOfWaterPA: Double
+        var dryBulbWaterSaturationPressurePD: Double
+        var wetBulbWaterSaturationPressurePW: Double
+        var partialWaterPressureDueToDepressionPM: Double
+        let standardAirMolarWeight = 28.96;
+        let criticalPressureH20 = 166818.0;
+        let criticalTemperatureH20 = 1165.67;
+        let pressMmHg=754.30;
+        var humidityH20DryAir:Double
+        if(wetBulbSwitch.isOn){
+            if(UnitSwitch.isOn){
+                dryBulbRankine = (dryBulbTemperature! * 1.8 + 32)  + 459.67
+                wetBulbRankine = (wetBulbTemperature! * 1.8 + 32) + 459.67
+            }
+            else {
+                dryBulbRankine = dryBulbTemperature! + 459.67;
+                wetBulbRankine = wetBulbTemperature! + 459.67;
+            }
+            
+            Kd = -0.0000000008833 * pow(dryBulbRankine,3) + 0.000003072 * pow(dryBulbRankine,2) - 0.003469 * dryBulbRankine + 4.39553
+            Kw = -0.0000000008833 * pow(wetBulbRankine,3)+0.000003072 * pow(wetBulbRankine,2) - 0.003469 * wetBulbRankine + 4.39553
+            dryBulbWaterSaturationPressurePD = criticalPressureH20 * pow(10, Kd * (1 - (criticalTemperatureH20 / dryBulbRankine)));
+            wetBulbWaterSaturationPressurePW = criticalPressureH20 * pow(10, Kw * (1 - (criticalTemperatureH20 / wetBulbRankine)));
+            partialWaterPressureDueToDepressionPM = 0.000367 * (1 + ((wetBulbRankine-459.67) - 32) / 1571) * (pressMmHg - wetBulbWaterSaturationPressurePW) * ((dryBulbRankine - 459.67) - (wetBulbRankine - 459.67));
+            if((wetBulbWaterSaturationPressurePW - partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD> = 100 || (wetBulbWaterSaturationPressurePW -  partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD < 0){
+            print("ERROR")
+            }
+            else{
+            relativeHumidity = 100 * (wetBulbWaterSaturationPressurePW-partialWaterPressureDueToDepressionPM)/dryBulbWaterSaturationPressurePD
+            }
+            partialPressureOfWaterPA = 0.01 * relativeHumidity * dryBulbWaterSaturationPressurePD
+            
+            if(wetBulbSwitch.isOn){
+                humidityH20WetAir = partialPressureOfWaterPA / pressMmHg;
+            }
+            else{
+                humidityH20WetAir = 0;
+            
+            dryMolecularWeight=(44.01 * (C02Composition * (1 - humidityH20WetAir)) + 31.999 * (O2Composition * ( 1 - humidityH20WetAir))+28.013*(N2Composition * (1-humidityH20WetAir))+39.948*(ARComposition * (1 - humidityH20WetAir)))/100;
+            
+            humidityH20DryAir = (18.02 / dryMolecularWeight) * (partialPressureOfWaterPA / (pressMmHg - partialPressureOfWaterPA))
+           
+         }
         let area = width!*height!
         let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
         let ductPressure = atmosphericPressure + staticPressure!*0.249088
@@ -131,18 +198,7 @@ class ViewController: UIViewController {
         ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: ductPressure as NSNumber)
         gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: gasDensity as NSNumber)
         
-
-    
     }
-    /*
-    func formatNumber(value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2;
-        let result = formatter
-    }
-    
-    */
     
     @IBAction func unitSwitchClicked(_ sender: Any) {
         var width = Double(widthTextField.text!)
@@ -154,6 +210,13 @@ class ViewController: UIViewController {
         var wetBulbTemperature = Double(wetBulbTemperatureTextField.text!)
         var seaLevelPressure = Double(pressureAtSeaLevelTextField.text!)
         var molecularWeight = Double(molecularWeightTextField.text!)
+        var averageVelocity = Double(averageVelocityResultLabel.text!)
+        var normalAirFlow = Double(normalAirFlowResultLabel.text!)
+        var massAirFlow = Double(massAirFlowResultLabel.text!)
+        var atmosphericPressure = Double(atmosphericPressureResultLabel.text!)
+        var actualAirFlow = Double(actualAirFlowResultLabel.text!)
+        var gasDensity = Double(gasDensityResultLabel.text!)
+        var ductPressure = Double(ductPressureResultLabel.text!)
         
         if UnitSwitch.isOn{
             widthUnitLabel.text = "m"
@@ -169,7 +232,28 @@ class ViewController: UIViewController {
             massAirFlowUnitLabel.text = "kg/s"
             actualAirFlowUnitLabel.text = "m^3/h"
             normalAirFlowUnitLabel.text = "Nm^3/h"
-            widthTextField.text = String(width! * 3)
+            ductPressureUnitLabel.text = "kPa"
+            
+            widthTextField.text = String(width! / 0.3048)
+            heightTextField.text = String(height! / 0.3048)
+            staticPressureTextField.text = String(staticPressure! / 0.2952998751)
+            dryBulbTemperatureTextField.text = String((dryBulbTemperature! - 32) / 1.8)
+            wetBulbTemperatureTextField.text = String((wetBulbTemperature! - 32) / 1.8)
+            pressureAtSeaLevelTextField.text = String(seaLevelPressure! / 0.2952998751)
+            areaResultLabel.text = String(width! / 0.3048)
+            averageVelocityResultLabel.text = String(averageVelocity! * 12 / 39.3701)
+            normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
+            atmosphericPressureResultLabel.text = String(atmosphericPressure! * 0.3048)
+            massAirFlowResultLabel.text = String(massAirFlow! / (2.2046*60))
+            actualAirFlowResultLabel.text = String(actualAirFlow! * 60 / (pow(39.3701 / 12,3)))
+            normalAirFlowResultLabel.text = String(normalAirFlow! / 0.3048)
+            ductPressureResultLabel.text = String(ductPressure! * 3.38639)
+            gasDensityResultLabel.text = String(gasDensity! * 16.018463)
+            
+         
+            
+         
+            
         }
         else{
             widthUnitLabel.text = "ft"
@@ -185,12 +269,38 @@ class ViewController: UIViewController {
             massAirFlowUnitLabel.text = "kg/s"
             actualAirFlowUnitLabel.text = "ACFM"
             normalAirFlowUnitLabel.text = "SCFM"
-            widthTextField.text = String(width! / 3)
             
-            
+            widthTextField.text = String(width! * 0.3048)
+            heightTextField.text = String(height! * 0.3048)
+            staticPressureTextField.text = String(staticPressure! * 0.2952998751)
+            dryBulbTemperatureTextField.text = String((dryBulbTemperature! - 32) / 1.8)
+            wetBulbTemperatureTextField.text = String((wetBulbTemperature! - 32) / 1.8)
+            pressureAtSeaLevelTextField.text = String(seaLevelPressure! * 0.2952998751)
+            areaResultLabel.text = String(width! * 0.3048)
+            averageVelocityResultLabel.text = String(averageVelocity! * 39.3701 / 12)
+            normalAirFlowResultLabel.text = String(normalAirFlow! * ((pow(39.3701 / 12,3) * (294.26/273.15))) / 60)
+            atmosphericPressureResultLabel.text = String(atmosphericPressure! / 0.3048)
+            massAirFlowResultLabel.text = String(massAirFlow! * (2.2046*60))
+            actualAirFlowResultLabel.text = String(actualAirFlow! * (pow(39.3701 / 12,3)) / 60)
+            normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
+            ductPressureResultLabel.text = String(ductPressure! / 3.38639)
+            gasDensityResultLabel.text = String(gasDensity! / 16.018463)
         }
         
     }
+    
+    
+    @IBAction func pipeShape(_ sender: Any) {
+        widthUnitLabel.text = "Diameter"
+    }
+    
+    //Dynamic Velocity
+    
+    
+    @IBOutlet weak var dynamicVelocityStepper: UIStepper!
+    @IBOutlet weak var dynamicVelocityLabel: UILabel!
+    @IBOutlet weak var dynamicVelocityEditText: UITextField!
+    
     
     
     @IBAction func clearButtonClicked(_ sender: Any) {
@@ -203,15 +313,51 @@ class ViewController: UIViewController {
         wetBulbTemperatureTextField.text="1"
         pressureAtSeaLevelTextField.text="1"
         pitotTubeCoeffecientTextField.text="1"
+        
+        self.view.addConstraint(NSLayoutConstraint(item: self.ductPressureResultLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 0))
+        
+        
     }
-
+    var dynamicPresureArray = [Double]()
+    @IBAction func modifyDynamicVelocityList(_ sender: UIStepper) {
+        
+        
+        if(dynamicVelocityStepper.value > oldValue && oldValue >= 0){
+            oldValue = oldValue + 1
+            dynamicPresureArray.append(Double(dynamicVelocityEditText.text!)!)
+            var dynamicPressureArrayString = ""
+            for dynamicPressure in dynamicPresureArray {
+                dynamicPressureArrayString += String(dynamicPressure) + " "
+            }
+            dynamicVelocityLabel.text = "DynamicValue" + String(dynamicVelocityStepper.value) + "Old Value" + String(oldValue) + dynamicPressureArrayString        }
+        else {
+            oldValue = oldValue - 1
+            
+            dynamicPresureArray.removeLast()
+            var dynamicPressureArrayString = ""
+            for dynamicPressure in dynamicPresureArray {
+                dynamicPressureArrayString += String(dynamicPressure) + " "
+            }
+            dynamicVelocityLabel.text = "DynamicValue" + String(dynamicVelocityStepper.value) + "Old Value" + String(oldValue) + dynamicPressureArrayString        }
+        
+    }
+    
+ 
+    var oldValue : Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        dynamicVelocityStepper.wraps = false
+        dynamicVelocityStepper.autorepeat = false
+        dynamicVelocityStepper.maximumValue = 40
+        dynamicVelocityStepper.minimumValue = 0
+        oldValue = dynamicVelocityStepper.value
+        
+        
 }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-
 
     

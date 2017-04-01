@@ -16,6 +16,8 @@
 		0B399A221E62338000A1933C /* Pitonew_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B399A211E62338000A1933C /* Pitonew_IOSTests.swift */; };
 		0B399A2D1E62338000A1933C /* Pitonew_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B399A2C1E62338000A1933C /* Pitonew_IOSUITests.swift */; };
 		90CBC5BC1E8391C100842B30 /* ResultsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CBC5BB1E8391C100842B30 /* ResultsStoryBoard.storyboard */; };
+		90F3612E1E9003D80041719B /* minus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 90F3612D1E9003D80041719B /* minus-32.png */; };
+		90F361301E9003EA0041719B /* plus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 90F3612F1E9003EA0041719B /* plus-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0B399A2C1E62338000A1933C /* Pitonew_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitonew_IOSUITests.swift; sourceTree = "<group>"; };
 		0B399A2E1E62338000A1933C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CBC5BB1E8391C100842B30 /* ResultsStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ResultsStoryBoard.storyboard; path = ../ResultsStoryBoard.storyboard; sourceTree = "<group>"; };
+		90F3612D1E9003D80041719B /* minus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-32.png"; path = "../../../Desktop/minus-32.png"; sourceTree = "<group>"; };
+		90F3612F1E9003EA0041719B /* plus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-32.png"; path = "../../../Desktop/plus-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				0B399A0B1E62338000A1933C /* ViewController.swift */,
 				0B399A0D1E62338000A1933C /* Main.storyboard */,
 				0B399A131E62338000A1933C /* Assets.xcassets */,
+				90F3612F1E9003EA0041719B /* plus-32.png */,
+				90F3612D1E9003D80041719B /* minus-32.png */,
 				0B399A151E62338000A1933C /* LaunchScreen.storyboard */,
 				0B399A181E62338000A1933C /* Info.plist */,
 				0B399A101E62338000A1933C /* Pitonew_IOS.xcdatamodeld */,
@@ -238,8 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F361301E9003EA0041719B /* plus-32.png in Resources */,
 				0B399A171E62338000A1933C /* LaunchScreen.storyboard in Resources */,
 				0B399A141E62338000A1933C /* Assets.xcassets in Resources */,
+				90F3612E1E9003D80041719B /* minus-32.png in Resources */,
 				90CBC5BC1E8391C100842B30 /* ResultsStoryBoard.storyboard in Resources */,
 				0B399A0F1E62338000A1933C /* Main.storyboard in Resources */,
 			);
