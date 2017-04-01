@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButton(_ sender: Any) {
         
-        if(widthTextField.text?.isEmpty || heightTextField.text?.isEmpty || pitotTubeCoeffecientTextField.text?.isEmpty || staticPressureTextField.text?.isEmpty || dryBulbTemperatureTextField.text?.isEmpty || elevationAboveSeaLevelTextField.text?.isEmpty || wetBulbTemperatureTextField.text?.isEmpty || pressureAtSeaLevelTextField.text?.isEmpty || molecularWeightTextField.text?.isEmpty || CO2TextField.text?.isEmpty || O2TextField.text?.isEmpty || N2TextField.text?.isEmpty || ArTextField.text?.isEmpty || H20TextField.text?.isEmpty) 
+        if((widthTextField.text?.isEmpty)! || (heightTextField.text?.isEmpty)! || (pitotTubeCoeffecientTextField.text?.isEmpty)! || (staticPressureTextField.text?.isEmpty)! || (dryBulbTemperatureTextField.text?.isEmpty)! || (elevationAboveSeaLevelTextField.text?.isEmpty)! || (wetBulbTemperatureTextField.text?.isEmpty)! || (pressureAtSeaLevelTextField.text?.isEmpty)! || (molecularWeightTextField.text?.isEmpty)!) //|| (CO2TextField.text?.isEmpty)! || (O2TextField.text?.isEmpty)! || (N2TextField.text?.isEmpty)! || (ArTextField.text?.isEmpty)! || (H20TextField.text?.isEmpty)!)
         {
             
         }
@@ -308,11 +308,87 @@ class ViewController: UIViewController {
         }
         
     }
+    @IBOutlet weak var CO2Label: UILabel!
     
+    @IBOutlet weak var H2OLabel: UILabel!
+    @IBOutlet weak var ArLabel: UILabel!
+    @IBOutlet weak var N2Label: UILabel!
+    @IBOutlet weak var O2LAbel: UILabel!
+    
+    @IBAction func standardAirSwitch(_ sender: Any) {
+        if(AirCompositionSwitch.isOn){
+            CO2Label.isHidden = true
+            CO2TextField.isHidden = true
+            O2LAbel.isHidden = true
+            O2TextField.isHidden = true
+            N2Label.isHidden = true
+            N2TextField.isHidden = true
+            ArLabel.isHidden = true
+            ArTextField.isHidden = true
+            H2OLabel.isHidden = true
+            H20TextField.isHidden = true
+            
+            
+            CO2TextField.text = "0.03"
+            O2TextField.text = "20.81"
+            N2TextField.text = "78.09"
+            ArTextField.text = "0.93"
+            H20TextField.text = "0.00"        }
+        else{
+            CO2Label.isHidden = false
+            CO2TextField.isHidden = false
+            O2LAbel.isHidden = false
+            O2TextField.isHidden = false
+            N2Label.isHidden = false
+            N2TextField.isHidden = false
+            ArLabel.isHidden = false
+            ArTextField.isHidden = false
+            H2OLabel.isHidden = false
+            H20TextField.isHidden = false
+            
+            CO2TextField.text = "0.03"
+            O2TextField.text = "20.81"
+            N2TextField.text = "78.09"
+            ArTextField.text = "0.93"
+            H20TextField.text = "0.00"
+            
+            
+        }
+    }
+    
+    @IBOutlet weak var wetBulbLabel: UILabel!
+    @IBAction func wetBulbEnabled(_ sender: Any) {
+        
+        if(wetBulbSwitch.isOn){
+            
+            wetBulbUnitLabel.isHidden = false
+            wetBulbTemperatureTextField.isHidden = false
+            wetBulbLabel.isHidden = false        }
+        else{
+            wetBulbUnitLabel.isHidden = true
+            wetBulbTemperatureTextField.isHidden = true
+            wetBulbLabel.isHidden = true
+            
+            
+        }
+        
+    }
     
     @IBAction func pipeShape(_ sender: Any) {
-        widthUnitLabel.text = "Diameter"
-    }
+        
+        if(pipeShapeSwitch.isOn){
+            widthUnitLabel.text = "Diameter"
+            heightLabel.isHidden = true
+            heightTextField.isHidden = true
+            heightUnitLabel.isHidden = true
+        }
+        else{
+            widthUnitLabel.text = "Width"
+            heightLabel.isHidden = false
+            heightTextField.isHidden = false
+            heightUnitLabel.isHidden = false
+        }
+            }
     
     //Dynamic Velocity
     
@@ -321,6 +397,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dynamicVelocityLabel: UILabel!
     @IBOutlet weak var dynamicVelocityEditText: UITextField!
     
+    @IBOutlet weak var heightLabel: UILabel!
     
     
     @IBAction func clearButtonClicked(_ sender: Any) {
@@ -334,10 +411,9 @@ class ViewController: UIViewController {
         pressureAtSeaLevelTextField.text="1"
         pitotTubeCoeffecientTextField.text="1"
         
-        self.view.addConstraint(NSLayoutConstraint(item: self.ductPressureResultLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 0))
+       
         
-        
-    }
+            }
     var dynamicPresureArray = [Double]()
     @IBAction func modifyDynamicVelocityList(_ sender: UIStepper) {
         

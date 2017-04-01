@@ -474,6 +474,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-zZ-qNE">
                                 <rect key="frame" x="171" y="852" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="standardAirSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="LXN-OA-bzy"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gq7-fU-Do4">
                                 <rect key="frame" x="13" y="891" width="42" height="21"/>
@@ -546,25 +549,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wet Bulb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVK-ZV-Jnk">
-                                <rect key="frame" x="10" y="1074" width="70" height="21"/>
+                                <rect key="frame" x="400" y="470" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pipe Shape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-82-LXO">
-                                <rect key="frame" x="10" y="1103" width="87" height="21"/>
+                                <rect key="frame" x="400" y="400" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMc-sz-aDY">
-                                <rect key="frame" x="159" y="1074" width="51" height="31"/>
+                                <rect key="frame" x="500" y="470" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="wetBulbEnabled:" destination="BYZ-38-t0r" eventType="valueChanged" id="p0I-LD-ky3"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ljd-5d-vr1">
-                                <rect key="frame" x="159" y="1103" width="51" height="31"/>
+                                <rect key="frame" x="500" y="400" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="pipeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ihd-73-qvL"/>
@@ -592,7 +598,7 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1v-4j-iRc">
-                                <rect key="frame" x="400" y="200" width="300" height="400"/>
+                                <rect key="frame" x="400" y="200" width="300" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -618,10 +624,15 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="AirCompositionSwitch" destination="1IU-zZ-qNE" id="dbD-LC-ZBA"/>
+                        <outlet property="ArLabel" destination="B2M-08-80v" id="shi-Yd-FiJ"/>
                         <outlet property="ArTextField" destination="Hkp-jv-WPy" id="b1H-Jb-LkQ"/>
+                        <outlet property="CO2Label" destination="Gq7-fU-Do4" id="Dhq-6V-llM"/>
                         <outlet property="CO2TextField" destination="FTu-WU-xNL" id="JiM-dJ-zG1"/>
                         <outlet property="H20TextField" destination="nnZ-cd-DBO" id="ebk-mz-nv2"/>
+                        <outlet property="H2OLabel" destination="Lhl-Su-iBB" id="jSc-D0-lQ5"/>
+                        <outlet property="N2Label" destination="Rtf-P3-bBD" id="hzq-Z6-Yjz"/>
                         <outlet property="N2TextField" destination="6If-UD-swh" id="T7W-af-Wsq"/>
+                        <outlet property="O2LAbel" destination="3E6-fJ-WA7" id="dyc-5a-plv"/>
                         <outlet property="O2TextField" destination="SYE-ay-5pA" id="LvW-fP-9Xg"/>
                         <outlet property="UnitSwitch" destination="Ao4-I8-p4U" id="qZX-8I-lNC"/>
                         <outlet property="actualAirFlowResultLabel" destination="QkZ-nS-BnV" id="lct-ta-dK8"/>
@@ -642,6 +653,7 @@
                         <outlet property="elevationAboveSeaLevelTextField" destination="Gpm-ta-i0w" id="R6z-Sy-DwE"/>
                         <outlet property="gasDensityResultLabel" destination="xjI-sb-cyi" id="TqJ-36-fFh"/>
                         <outlet property="gasDensityUnitLabel" destination="bIA-fD-BZU" id="RbH-8o-kiJ"/>
+                        <outlet property="heightLabel" destination="pkf-BC-1es" id="jZ0-MS-Qaf"/>
                         <outlet property="heightTextField" destination="fcA-pn-P6l" id="TCn-UW-3Eh"/>
                         <outlet property="heightUnitLabel" destination="d2g-7y-fhe" id="crI-hb-0RC"/>
                         <outlet property="massAirFlowResultLabel" destination="OPe-hO-Dm5" id="yck-a7-LRB"/>
@@ -655,6 +667,7 @@
                         <outlet property="relativeHumidityResultLabel" destination="SwW-qX-2MZ" id="pWK-1N-wWU"/>
                         <outlet property="staticPressureTextField" destination="LLN-Ba-WeO" id="TXT-Ii-rbI"/>
                         <outlet property="staticPressureUnitLabel" destination="auD-1M-OrE" id="fe1-LJ-FH5"/>
+                        <outlet property="wetBulbLabel" destination="SkL-uf-A0S" id="mht-aK-OpV"/>
                         <outlet property="wetBulbSwitch" destination="bMc-sz-aDY" id="wm5-eF-Za4"/>
                         <outlet property="wetBulbTemperatureTextField" destination="Vus-9n-cXL" id="NW9-YP-Hqv"/>
                         <outlet property="wetBulbUnitLabel" destination="TJW-ep-6ds" id="Ouk-iO-wte"/>
