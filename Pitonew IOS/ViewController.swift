@@ -114,7 +114,7 @@ class ViewController: UIViewController {
         let criticalTemperatureH20 = 1165.67;
         let pressMmHg=754.30;
         var humidityH20DryAir:Double
-        /*
+        
         if(wetBulbSwitch.isOn){
             if(UnitSwitch.isOn){
                 dryBulbRankine = (dryBulbTemperature! * 1.8 + 32)  + 459.67
@@ -131,12 +131,14 @@ class ViewController: UIViewController {
             wetBulbWaterSaturationPressurePW = criticalPressureH20 * pow(10, Kw * (1 - (criticalTemperatureH20 / wetBulbRankine)));
             partialWaterPressureDueToDepressionPM = 0.000367 * (1 + ((wetBulbRankine-459.67) - 32) / 1571) * (pressMmHg - wetBulbWaterSaturationPressurePW) * ((dryBulbRankine - 459.67) - (wetBulbRankine - 459.67));
          
+            /*
             if((wetBulbWaterSaturationPressurePW - partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD> = 100 || (wetBulbWaterSaturationPressurePW -  partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD < 0){
             print("ERROR")
             }
             else{
+            */
             relativeHumidity = 100 * (wetBulbWaterSaturationPressurePW-partialWaterPressureDueToDepressionPM)/dryBulbWaterSaturationPressurePD
-            }
+            //}
             partialPressureOfWaterPA = 0.01 * relativeHumidity * dryBulbWaterSaturationPressurePD
             
             if(wetBulbSwitch.isOn){
@@ -144,13 +146,18 @@ class ViewController: UIViewController {
             }
             else{
                 humidityH20WetAir = 0;
-            
-            dryMolecularWeight=(44.01 * (C02Composition * (1 - humidityH20WetAir)) + 31.999 * (O2Composition * ( 1 - humidityH20WetAir))+28.013*(N2Composition * (1-humidityH20WetAir))+39.948*(ARComposition * (1 - humidityH20WetAir)))/100;
+        
+            var part1 = 44.01 * (C02Composition * (1 - humidityH20WetAir))
+            var part2 = 31.999 * (O2Composition * ( 1 - humidityH20WetAir))
+            var part3 = 28.013*(N2Composition * (1-humidityH20WetAir))
+            var part4 = 39.948*(ARComposition * (1 - humidityH20WetAir)))
+
+            dryMolecularWeight = (part1 + part2 + part3 + part4)/100;
             
             humidityH20DryAir = (18.02 / dryMolecularWeight) * (partialPressureOfWaterPA / (pressMmHg - partialPressureOfWaterPA))
            
          }
- */
+ 
         let area = width!*height!
         let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
         let ductPressure = atmosphericPressure + staticPressure!*0.249088
