@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         let elevationAboveSealevel = Double(elevationAboveSeaLevelTextField.text!)
         let wetBulbTemperature = Double(wetBulbTemperatureTextField.text!)
         let seaLevelPressure = Double(pressureAtSeaLevelTextField.text!)
-        let molecularWeight = Double(molecularWeightTextField.text!)
+        var molecularWeight = Double(molecularWeightTextField.text!)
         let C02Composition = Double(CO2TextField.text!)
         let O2Composition = Double(O2TextField.text!)
         let N2Composition = Double(N2TextField.text!)
@@ -108,7 +108,7 @@ class ViewController: UIViewController {
         var dryBulbRankine: Double
         var wetBulbRankine: Double
         var Kd: Double
-        var humidityH20WetAir: Double
+        var humidityH20WetAir = 0.0
         var Kw: Double
         var dryMolecularWeight: Double
         var partialPressureOfWaterPA: Double
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
         let criticalTemperatureH20 = 1165.67;
         let pressMmHg=754.30;
         var humidityH20DryAir:Double
-        /*
+        
         if(wetBulbSwitch.isOn){
             if(UnitSwitch.isOn){
                 dryBulbRankine = (dryBulbTemperature! * 1.8 + 32)  + 459.67
@@ -136,15 +136,14 @@ class ViewController: UIViewController {
             dryBulbWaterSaturationPressurePD = criticalPressureH20 * pow(10, Kd * (1 - (criticalTemperatureH20 / dryBulbRankine)))
             wetBulbWaterSaturationPressurePW = criticalPressureH20 * pow(10, Kw * (1 - (criticalTemperatureH20 / wetBulbRankine)))
             partialWaterPressureDueToDepressionPM = 0.000367 * (1 + ((wetBulbRankine-459.67) - 32) / 1571) * (pressMmHg - wetBulbWaterSaturationPressurePW) * ((dryBulbRankine - 459.67) - (wetBulbRankine - 459.67))
-         
             
-            if((wetBulbWaterSaturationPressurePW - partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD> = 100 || (wetBulbWaterSaturationPressurePW -  partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD < 0){
-            }
-            else{
- 
-            relativeHumidity = 100 * (wetBulbWaterSaturationPressurePW-partialWaterPressureDueToDepressionPM)/dryBulbWaterSaturationPressurePD
-            }
- 
+             // if((wetBulbWaterSaturationPressurePW - partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD> = 100 || (wetBulbWaterSaturationPressurePW -  partialWaterPressureDueToDepressionPM) / dryBulbWaterSaturationPressurePD < 0){
+            //}
+           // else{
+                
+                relativeHumidity = 100 * (wetBulbWaterSaturationPressurePW-partialWaterPressureDueToDepressionPM)/dryBulbWaterSaturationPressurePD
+           // }
+            
             partialPressureOfWaterPA = 0.01 * relativeHumidity * dryBulbWaterSaturationPressurePD
             
             if(wetBulbSwitch.isOn){
@@ -152,54 +151,66 @@ class ViewController: UIViewController {
             }
             else{
                 humidityH20WetAir = 0;
-        
-            var part1 = 44.01 * (C02Composition! * (1 - humidityH20WetAir))
-            var part2 = 31.999 * (O2Composition! * ( 1 - humidityH20WetAir))
-            var part3 = 28.013*(N2Composition! * (1-humidityH20WetAir))
-            var part4 = 39.948*(ARComposition! * (1 - humidityH20WetAir))
-
-            dryMolecularWeight = (part1 + part2 + part3 + part4)/100;
+            }
             
-            humidityH20DryAir = (18.02 / dryMolecularWeight) * (partialPressureOfWaterPA / (pressMmHg - partialPressureOfWaterPA))
+                var part1 = 44.01 * (C02Composition! * (1 - humidityH20WetAir))
+                var part2 = 31.999 * (O2Composition! * ( 1 - humidityH20WetAir))
+                var part3 = 28.013*(N2Composition! * (1-humidityH20WetAir))
+                var part4 = 39.948*(ARComposition! * (1 - humidityH20WetAir))
+                
+                dryMolecularWeight = (part1 + part2 + part3 + part4)/100;
+                
+                humidityH20DryAir = (18.02 / dryMolecularWeight) * (partialPressureOfWaterPA / (pressMmHg - partialPressureOfWaterPA))
+        
+        }
+        else{
+            
+            }
+            
+            
+            if(AirCompositionSwitch.isOn){
+                if(wetBulbSwitch.isOn){
+                    var part1 = 0.03 * (1 - humidityH20WetAir)
+                    var part2 = 20.95 * (1 - humidityH20WetAir)
+                    var part3 = 78.09 * (1 - humidityH20WetAir)
+                    var part4 = 0.93 * (1 - humidityH20WetAir)
+                    var part5 = 100 * humidityH20WetAir
+                    
+                    
+                    molecularWeight = part1 + part2 + part3 + part4 + part5
+                }
+                else {
+                    molecularWeight = 28.96
+                }
+            }
+            else {
+                if(wetBulbSwitch.isOn){
+                    var part1 = 44.01 * C02Composition! * (1 - humidityH20WetAir)
+                    var part2 = 31.999 * O2Composition!*(1 - humidityH20WetAir)
+                    var part3 = 28.013 * N2Composition!*(1 - humidityH20WetAir)
+                    var part4 = 39.948 * ARComposition! * (1 - humidityH20WetAir)
+                    var part5 = 18.016 * 100 * humidityH20WetAir
+                    molecularWeight = (part1 + part2 + part3 + part4 + part5)/100
+                }
+                else {
+                    var part1 = 44.01 * C02Composition!
+                    var part2 = 31.999 * O2Composition!
+                    var part3 = 28.013 * N2Composition!
+                    var part4 = 39.948 * ARComposition!
+                    molecularWeight = (part1 + part2 + part3 + part4) / 100
+                }
+                
+            }
+            /*
+            
+            
+            
+            
            
          }
          else {
         }
-            
-        if(AirCompositionSwitch.isOn){
-            if(wetBulbSwitch.isOn){
-                var part1 = 0.03 * (1 - humidityH20WetAir)  
-                var part2 = 20.95 * (1 - humidityH20WetAir)  
-                var part3 = 78.09 * (1 - humidityH20WetAir)
-                var part4 = 0.93 * (1 - humidityH20WetAir)
-                var part5 = 100 * humidityH20WetAir
-
-            
-                molecularWeight = part1 + part2 + part3 + part4 + part5
-            }
-            else {
-                molecularWeight = 28.96
-            }
-        }
-        else {
-            if(wetBulbSwitch.isOn){  
-                var part1 = 44.01 * C02Composition * (1 - humidityH20WetAir)
-                var part2 = 31.999 * O2Composition*(1 - humidityH20WetAir)
-                var part3 = 28.013 * N2Composition*(1 - humidityH20WetAir)
-                var part4 = 39.948 * ArComposition * (1 - humidityH20WetAir)
-                var part5 = 18.016 * 100 * humidityH20WetAir
-                molecularWeight = (part1 + part2 + part3 + part4 + part5)/100
-            }
-            else {
-                var part1 = 44.01 * C02Composition
-                var part2 = 31.999 * O2Composition
-                var part3 = 28.013 * N2Composition
-                var part4 = 39.948 * ArComposition 
-                molecularWeight = (part1 + part2 + part3 + part4) / 100
-                }
-
-        }
-
+       
     }
             
  */
@@ -449,7 +460,11 @@ class ViewController: UIViewController {
         wetBulbTemperatureTextField.text="1"
         pressureAtSeaLevelTextField.text="1"
         pitotTubeCoeffecientTextField.text="1"
-        
+        CO2TextField.text="0.03"
+        ArTextField.text="20.95"
+        N2TextField.text="78.09"
+        O2TextField.text="0.93"
+        H20TextField.text="0.0"
        
         
             }
