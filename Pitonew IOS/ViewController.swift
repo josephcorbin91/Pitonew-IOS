@@ -83,6 +83,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButton(_ sender: Any) {
+        
+        if(widthTextField.text.isEmpty || heightTextField.text.isEmpty || pitotTubeCoeffecientTextField.text.isEmpty || staticPressureTextField.text.isEmpty || dryBulbTemperatureTextField.text.isEmpty || elevationAboveSeaLevelTextField.text.isEmpty || wetBulbTemperatureTextField.text.isEmpty || pressureAtSeaLevelTextField.text.isEmpty || molecularWeightTextField.text.isEmpty || CO2TextField.text.isEmpty || O2TextField.text.isEmpty || N2TextField.text.isEmpty || ArTextField.text.isEmpty || H20TextField.text.isEmpty) 
+        {
+            
+        }
+        else{
         var dynamicPressureArray:[Double] = [1]
         let width = Double(widthTextField.text!)
         let height = Double(heightTextField.text!)
@@ -159,6 +165,8 @@ class ViewController: UIViewController {
            
          }
  */
+        
+        
         let area = width!*height!
         let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
         let ductPressure = atmosphericPressure + staticPressure!*0.249088
@@ -208,6 +216,7 @@ class ViewController: UIViewController {
         actualAirFlowResultLabel.text = String(Int(actualAirFlow))
         ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: ductPressure as NSNumber)
         gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: gasDensity as NSNumber)
+        }
         
     }
     
