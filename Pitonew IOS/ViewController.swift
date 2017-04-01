@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButton(_ sender: Any) {
-        var dynamicPressureArray:[Double] = [1]
+        //var dynamicPressureArray:[Double] = [1]
         let width = Double(widthTextField.text!)
         let height = Double(heightTextField.text!)
         let pilotTubeCoeffecient = Double(pitotTubeCoeffecientTextField.text!)
