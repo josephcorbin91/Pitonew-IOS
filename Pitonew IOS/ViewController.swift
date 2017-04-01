@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     
     @IBAction func calculateButton(_ sender: Any) {
         
-        if(widthTextField.text.isEmpty || heightTextField.text.isEmpty || pitotTubeCoeffecientTextField.text.isEmpty || staticPressureTextField.text.isEmpty || dryBulbTemperatureTextField.text.isEmpty || elevationAboveSeaLevelTextField.text.isEmpty || wetBulbTemperatureTextField.text.isEmpty || pressureAtSeaLevelTextField.text.isEmpty || molecularWeightTextField.text.isEmpty || CO2TextField.text.isEmpty || O2TextField.text.isEmpty || N2TextField.text.isEmpty || ArTextField.text.isEmpty || H20TextField.text.isEmpty) 
+        if(widthTextField.text?.isEmpty || heightTextField.text?.isEmpty || pitotTubeCoeffecientTextField.text?.isEmpty || staticPressureTextField.text?.isEmpty || dryBulbTemperatureTextField.text?.isEmpty || elevationAboveSeaLevelTextField.text?.isEmpty || wetBulbTemperatureTextField.text?.isEmpty || pressureAtSeaLevelTextField.text?.isEmpty || molecularWeightTextField.text?.isEmpty || CO2TextField.text?.isEmpty || O2TextField.text?.isEmpty || N2TextField.text?.isEmpty || ArTextField.text?.isEmpty || H20TextField.text?.isEmpty) 
         {
             
         }
