@@ -147,10 +147,10 @@ class ViewController: UIViewController {
             partialPressureOfWaterPA = 0.01 * relativeHumidity * dryBulbWaterSaturationPressurePD
             
             if(wetBulbSwitch.isOn){
-                humidityH20WetAir = partialPressureOfWaterPA / pressMmHg;
+                humidityH20WetAir = partialPressureOfWaterPA / pressMmHg
             }
             else{
-                humidityH20WetAir = 0;
+                humidityH20WetAir = 0
             }
             
                 var part1 = 44.01 * (C02Composition! * (1 - humidityH20WetAir))
@@ -186,8 +186,8 @@ class ViewController: UIViewController {
             else {
                 if(wetBulbSwitch.isOn){
                     var part1 = 44.01 * C02Composition! * (1 - humidityH20WetAir)
-                    var part2 = 31.999 * O2Composition!*(1 - humidityH20WetAir)
-                    var part3 = 28.013 * N2Composition!*(1 - humidityH20WetAir)
+                    var part2 = 31.999 * O2Composition! * (1 - humidityH20WetAir)
+                    var part3 = 28.013 * N2Composition! * (1 - humidityH20WetAir)
                     var part4 = 39.948 * ARComposition! * (1 - humidityH20WetAir)
                     var part5 = 18.016 * 100 * humidityH20WetAir
                     molecularWeight = (part1 + part2 + part3 + part4 + part5)/100
