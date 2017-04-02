@@ -80,9 +80,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var actualAirFlowTitle: UILabel!
     @IBOutlet weak var gasDensityTitle: UILabel!
     @IBOutlet weak var dynamicVelocityTitle: UILabel!
+    @IBOutlet weak var staticPressureTitle: UILabel!
+    @IBOutlet weak var molecularWeightTitle: UILabel!
     
     @IBOutlet weak var ductPressureTitle: UILabel!
+    @IBOutlet weak var areaTitle: UILabel!
+    @IBOutlet weak var pipeShapeSwitch: UISwitch!
+    @IBOutlet weak var nonStandardAirSwitchTitle: UILabel!
+    @IBOutlet weak var wetBulbSwitchTitle: UILabel!
+    @IBOutlet weak var dryBulbTitle: UILabel!
+    @IBOutlet weak var seaLevelTitle: UILabel!
+    @IBOutlet weak var elevationTitle: UILabel!
+    @IBOutlet weak var relativeHumidityTitle: UILabel!
+    @IBOutlet weak var pitotTubeTitle: UILabel!
     
+    @IBOutlet weak var pipeShapeTitle: UILabel!
     
     func average(nums: [Double]) -> Double {
         

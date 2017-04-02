@@ -653,6 +653,7 @@
                         <outlet property="actualAirFlowTitle" destination="asj-vD-i4T" id="cwr-XV-I3S"/>
                         <outlet property="actualAirFlowUnitLabel" destination="xg1-QI-gJS" id="gkz-as-Jrj"/>
                         <outlet property="areaResultLabel" destination="v7I-IE-oXp" id="IXU-Eq-BvB"/>
+                        <outlet property="areaTitle" destination="ckB-hf-i4u" id="tZV-9Q-fYJ"/>
                         <outlet property="areaUnitLabel" destination="7Cl-31-cb0" id="sYX-ls-Sru"/>
                         <outlet property="atmoshpericPressureTItle" destination="Lnd-hx-pUx" id="X3n-BN-Ye3"/>
                         <outlet property="atmosphericPressureResultLabel" destination="dhm-rb-THl" id="MOm-BZ-TtS"/>
@@ -660,7 +661,7 @@
                         <outlet property="averageVelocityResultLabel" destination="TxN-sF-Jw4" id="oej-n7-QPt"/>
                         <outlet property="averageVelocityUnitLabel" destination="WP7-gD-4Hm" id="sGF-wP-38y"/>
                         <outlet property="dryBulbTemperatureTextField" destination="XhH-46-kJZ" id="vNq-cV-OP3"/>
-                        <outlet property="dryBulbTitle" destination="xdO-lD-Ifg" id="JBX-MJ-DtM"/>
+                        <outlet property="dryBulbTitle" destination="Grg-KF-YDN" id="It9-sg-Tjz"/>
                         <outlet property="dryBulbUnitLabel" destination="Ieh-uZ-4Wo" id="lTy-6U-TtS"/>
                         <outlet property="ductPressureResultLabel" destination="tAR-XH-Scn" id="fDH-Mg-4x6"/>
                         <outlet property="ductPressureTitle" destination="Rvj-Ob-Svs" id="zLd-Ta-zwi"/>
@@ -670,6 +671,7 @@
                         <outlet property="dynamicVelocityStepper" destination="6Rj-9I-DDe" id="6dt-Gv-a0y"/>
                         <outlet property="dynamicVelocityTitle" destination="tIl-QH-yMd" id="et2-yf-EY5"/>
                         <outlet property="elevationAboveSeaLevelTextField" destination="Gpm-ta-i0w" id="R6z-Sy-DwE"/>
+                        <outlet property="elevationTitle" destination="Ops-bP-2Sr" id="jq9-9z-auw"/>
                         <outlet property="gasDensityResultLabel" destination="xjI-sb-cyi" id="TqJ-36-fFh"/>
                         <outlet property="gasDensityTitle" destination="UOv-gy-vdG" id="vUI-mJ-7BQ"/>
                         <outlet property="gasDensityUnitLabel" destination="bIA-fD-BZU" id="RbH-8o-kiJ"/>
@@ -680,19 +682,28 @@
                         <outlet property="massAirFlowTitle" destination="hbi-Ya-mG0" id="UOd-J7-T8S"/>
                         <outlet property="massAirFlowUnitLabel" destination="xct-uV-8d3" id="4R2-N8-BX5"/>
                         <outlet property="molecularWeightTextField" destination="D50-h5-dxc" id="LGN-X5-cWA"/>
+                        <outlet property="molecularWeightTitle" destination="E4t-Qc-unz" id="UKa-gb-6B1"/>
+                        <outlet property="nonStandardAirSwitchTitle" destination="sYs-Jg-IOc" id="Ijd-OP-vir"/>
                         <outlet property="normalAirFlowResultLabel" destination="oW6-Qi-m1C" id="ilm-lx-6i5"/>
                         <outlet property="normalAirFlowTitle" destination="KUt-3B-ftY" id="bbp-ZI-c0s"/>
                         <outlet property="normalAirFlowUnitLabel" destination="ut9-0z-Rqf" id="ipi-l4-Da4"/>
+                        <outlet property="pipeShapeSwitch" destination="Ljd-5d-vr1" id="fOu-iv-gXN"/>
+                        <outlet property="pipeShapeTitle" destination="2kt-82-LXO" id="iyB-V8-xGS"/>
                         <outlet property="pitotTubeCoeffecientTextField" destination="GeI-M7-ydI" id="Dia-yp-Qyr"/>
+                        <outlet property="pitotTubeTitle" destination="MS0-QF-AHd" id="qD3-d0-NvZ"/>
                         <outlet property="pressureAtSeaLevelTextField" destination="wBU-8v-oIn" id="djd-Cv-qBw"/>
                         <outlet property="pressureSeaLevelUnitLabel" destination="XHU-Ug-kOH" id="Jv0-dk-yIR"/>
                         <outlet property="relativeHumidityResultLabel" destination="SwW-qX-2MZ" id="pWK-1N-wWU"/>
+                        <outlet property="relativeHumidityTitle" destination="xdO-lD-Ifg" id="yI5-ws-Wcl"/>
+                        <outlet property="seaLevelTitle" destination="T9R-hx-sJ1" id="Wgt-vZ-EEu"/>
                         <outlet property="segmentedControl" destination="bj9-in-xoa" id="jT1-q6-ZQV"/>
                         <outlet property="staticPressureTextField" destination="LLN-Ba-WeO" id="TXT-Ii-rbI"/>
+                        <outlet property="staticPressureTitle" destination="ns8-xC-vCo" id="EnL-Ph-t35"/>
                         <outlet property="staticPressureUnitLabel" destination="auD-1M-OrE" id="fe1-LJ-FH5"/>
                         <outlet property="velocityAverageTitle" destination="ykQ-gg-RkN" id="Yyv-Wc-Vv6"/>
                         <outlet property="wetBulbLabel" destination="SkL-uf-A0S" id="mht-aK-OpV"/>
                         <outlet property="wetBulbSwitch" destination="bMc-sz-aDY" id="wm5-eF-Za4"/>
+                        <outlet property="wetBulbSwitchTitle" destination="kVK-ZV-Jnk" id="kvx-cf-jqh"/>
                         <outlet property="wetBulbTemperatureTextField" destination="Vus-9n-cXL" id="NW9-YP-Hqv"/>
                         <outlet property="wetBulbUnitLabel" destination="TJW-ep-6ds" id="Ouk-iO-wte"/>
                         <outlet property="widthTextField" destination="3Zu-um-JAy" id="03d-xZ-jbj"/>
