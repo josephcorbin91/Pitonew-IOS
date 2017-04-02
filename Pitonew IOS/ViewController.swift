@@ -274,20 +274,111 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentedControlindexChange(_ sender: Any) {
        
-        /*switch segmentedControl.selectedSegmentIndex {
+        switch segmentedControl.selectedSegmentIndex {
         case 0:
             {
+                widthUnitLabel.isHidden = false
+                heightUnitLabel.isHidden = false
+                dryBulbUnitLabel.isHidden = false
+                staticPressureUnitLabel.isHidden = false
+                pressureSeaLevelUnitLabel.isHidden = false
+                wetBulbUnitLabel.isHidden = false
+                
+                areaUnitLabel.isHidden = true
+                averageVelocityUnitLabel.isHidden = true
+                normalAirFlowUnitLabel.isHidden = true
+                atmosphericPressureUnitLabel.isHidden = true
+                actualAirFlowUnitLabel.isHidden = true
+                massAirFlowUnitLabel.isHidden = true
+                ductPressureUnitLabel.isHidden = true
+                gasDensityUnitLabel.isHidden = true
+                
+                averageVelocityResultLabel.isHidden = true
+                areaResultLabel.isHidden = true
+                normalAirFlowResultLabel.isHidden = true
+                gasDensityResultLabel.isHidden = true
+                ductPressureResultLabel.isHidden = true
+                actualAirFlowResultLabel.isHidden = true
+                massAirFlowResultLabel.isHidden = true
+                atmosphericPressureResultLabel.isHidden = true
+                relativeHumidityResultLabel.isHidden = true
+                
+                
+                
+                AirCompositionSwitch.isHidden = false
+                wetBulbSwitch.isHidden = false
+                pipeShapeSwitch.isHidden = false
+                CO2Label.isHidden = false
+  
+                
+                widthTextField.isHidden = false
+                heightTextField.isHidden = false
+                molecularWeightTextField.isHidden = false
+                dryBulbTemperatureTextField.isHidden = false
+                staticPressureTextField.isHidden = false
+                elevationAboveSeaLevelTextField.isHidden = false
+                wetBulbTemperatureTextField.isHidden = false
+                pitotTubeCoeffecientTextField.isHidden = false
+                pressureAtSeaLevelTextField.isHidden = false
+                
+                
+   
+   
             }
             
         case 1:
             {
         
+                widthUnitLabel.isHidden = true
+                heightUnitLabel.isHidden = true
+                dryBulbUnitLabel.isHidden = true
+                staticPressureUnitLabel.isHidden = true
+                pressureSeaLevelUnitLabel.isHidden = true
+                wetBulbUnitLabel.isHidden = true
+                
+                areaUnitLabel.isHidden = false
+                averageVelocityUnitLabel.isHidden = false
+                normalAirFlowUnitLabel.isHidden = false
+                atmosphericPressureUnitLabel.isHidden = false
+                actualAirFlowUnitLabel.isHidden = false
+                massAirFlowUnitLabel.isHidden = false
+                ductPressureUnitLabel.isHidden = false
+                gasDensityUnitLabel.isHidden = false
+                
+                averageVelocityResultLabel.isHidden = false
+                areaResultLabel.isHidden = false
+                normalAirFlowResultLabel.isHidden = false
+                gasDensityResultLabel.isHidden = false
+                ductPressureResultLabel.isHidden = false
+                actualAirFlowResultLabel.isHidden = false
+                massAirFlowResultLabel.isHidden = false
+                atmosphericPressureResultLabel.isHidden = false
+                relativeHumidityResultLabel.isHidden = false
+                
+                
+                
+                AirCompositionSwitch.isHidden = true
+                wetBulbSwitch.isHidden = true
+                pipeShapeSwitch.isHidden = true
+                CO2Label.isHidden = true
+  
+                
+                widthTextField.isHidden = true
+                heightTextField.isHidden = true
+                molecularWeightTextField.isHidden = true
+                dryBulbTemperatureTextField.isHidden = true
+                staticPressureTextField.isHidden = true
+                elevationAboveSeaLevelTextField.isHidden = true
+                wetBulbTemperatureTextField.isHidden = true
+                pitotTubeCoeffecientTextField.isHidden = true
+                pressureAtSeaLevelTextField.isHidden = true
+                
         }
             
         default:
             break
         }
- */
+
     }
     
     @IBAction func unitSwitchClicked(_ sender: Any) {
