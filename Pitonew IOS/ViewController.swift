@@ -304,26 +304,81 @@ class ViewController: UIViewController {
             normalAirFlowUnitLabel.text = "Nm^3/h"
             ductPressureUnitLabel.text = "kPa"
             
-            widthTextField.text = String(width! / 0.3048)
+            if(widthTextField.text?.isEmpty)!{
+            }
+            else{
+                widthTextField.text = String(width! / 0.3048)
+            }
+            if(heightTextField.text?.isEmpty)!{
+            }
+            else{
             heightTextField.text = String(height! / 0.3048)
+            }
+            if(staticPressureTextField.text?.isEmpty)!{
+            }
+            else{
             staticPressureTextField.text = String(staticPressure! / 0.2952998751)
+            }
+            if(dryBulbTemperatureTextField.text?.isEmpty)!{
+            }
+            else{
             dryBulbTemperatureTextField.text = String((dryBulbTemperature! - 32) / 1.8)
+            }
+            if(wetBulbTemperatureTextField.text?.isEmpty)!{
+            }
+            else{
             wetBulbTemperatureTextField.text = String((wetBulbTemperature! - 32) / 1.8)
+            }
+            if(pressureAtSeaLevelTextField.text?.isEmpty)!{
+            }
+            else{
             pressureAtSeaLevelTextField.text = String(seaLevelPressure! / 0.2952998751)
-            areaResultLabel.text = String(width! / 0.3048)
+            }
+            if(areaResultLabel.text?.isEmpty)!{
+            }
+            else{
+            areaResultLabel.text = String(width! * 0.3048)
+            }
+            if(averageVelocityResultLabel.text?.isEmpty)!{
+            }
+            else{
             averageVelocityResultLabel.text = String(averageVelocity! * 12 / 39.3701)
+            }
+            if(normalAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
+            }
+            if(atmosphericPressureResultLabel.text?.isEmpty)!{
+            }
+            else{
             atmosphericPressureResultLabel.text = String(atmosphericPressure! * 0.3048)
+            }
+            if(massAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             massAirFlowResultLabel.text = String(massAirFlow! / (2.2046*60))
+            }
+            if(actualAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             actualAirFlowResultLabel.text = String(actualAirFlow! * 60 / (pow(39.3701 / 12,3)))
+            }
+            if(normalAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             normalAirFlowResultLabel.text = String(normalAirFlow! / 0.3048)
+            }
+            if(ductPressureResultLabel.text?.isEmpty)!{
+            }
+            else{
             ductPressureResultLabel.text = String(ductPressure! * 3.38639)
+            }
+            if(gasDensityResultLabel.text?.isEmpty)!{
+            }
+            else{
             gasDensityResultLabel.text = String(gasDensity! * 16.018463)
-            
-         
-            
-         
-            
+            }
         }
         else{
             widthUnitLabel.text = "ft"
@@ -340,21 +395,81 @@ class ViewController: UIViewController {
             actualAirFlowUnitLabel.text = "ACFM"
             normalAirFlowUnitLabel.text = "SCFM"
             
+                  if(widthTextField.text?.isEmpty)!{
+            }
+            else{
             widthTextField.text = String(width! * 0.3048)
+            }
+            if(heightTextField.text?.isEmpty)!{
+            }
+            else{
             heightTextField.text = String(height! * 0.3048)
+            }
+            if(staticPressureTextField.text?.isEmpty)!{
+            }
+            else{
             staticPressureTextField.text = String(staticPressure! * 0.2952998751)
-            dryBulbTemperatureTextField.text = String((dryBulbTemperature! - 32) / 1.8)
-            wetBulbTemperatureTextField.text = String((wetBulbTemperature! - 32) / 1.8)
+            }
+            if(dryBulbTemperatureTextField.text?.isEmpty)!{
+            }
+            else{
+            dryBulbTemperatureTextField.text = String((dryBulbTemperature! * 1.8) +32)
+            }
+            if(wetBulbTemperatureTextField.text?.isEmpty)!{
+            }
+            else{
+            wetBulbTemperatureTextField.text = String((wetBulbTemperature! * 1.8) +32)
+            }
+            if(pressureAtSeaLevelTextField.text?.isEmpty)!{
+            }
+            else{
             pressureAtSeaLevelTextField.text = String(seaLevelPressure! * 0.2952998751)
-            areaResultLabel.text = String(width! * 0.3048)
+            }
+            if(areaResultLabel.text?.isEmpty)!{
+            }
+            else{
+            areaResultLabel.text = String(width! / 0.3048)
+            }
+            if(averageVelocityResultLabel.text?.isEmpty)!{
+            }
+            else{
             averageVelocityResultLabel.text = String(averageVelocity! * 39.3701 / 12)
+            }
+            if(normalAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             normalAirFlowResultLabel.text = String(normalAirFlow! * ((pow(39.3701 / 12,3) * (294.26/273.15))) / 60)
+            }
+            if(atmosphericPressureResultLabel.text?.isEmpty)!{
+            }
+            else{
             atmosphericPressureResultLabel.text = String(atmosphericPressure! / 0.3048)
+            }
+            if(massAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             massAirFlowResultLabel.text = String(massAirFlow! * (2.2046*60))
+            }
+            if(actualAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             actualAirFlowResultLabel.text = String(actualAirFlow! * (pow(39.3701 / 12,3)) / 60)
+            }
+            if(normalAirFlowResultLabel.text?.isEmpty)!{
+            }
+            else{
             normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
+            }
+            if(ductPressureResultLabel.text?.isEmpty)!{
+            }
+            else{
             ductPressureResultLabel.text = String(ductPressure! / 3.38639)
+            }
+            if(gasDensityResultLabel.text?.isEmpty)!{
+            }
+            else{
             gasDensityResultLabel.text = String(gasDensity! / 16.018463)
+            }
         }
         
     }
