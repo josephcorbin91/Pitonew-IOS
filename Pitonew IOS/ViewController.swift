@@ -664,6 +664,20 @@ class ViewController: UIViewController {
         self.gasDensityTitle.isHidden = true
         self.dynamicVelocityTitle.isHidden = false
         self.ductPressureTitle.isHidden = true
+            
+              self.areaTitle.isHidden = true
+              self.pipeShapeSwitch.isHidden = false
+              self.nonStandardAirSwitchTitle.isHidden = false
+              self.wetBulbSwitchTitle.isHidden = false
+              self.dryBulbTitle.isHidden = false
+              self.seaLevelTitle.isHidden = false
+              self.elevationTitle.isHidden = false
+              self.relativeHumidityTitle.isHidden = true
+              self.pitotTubeTitle.isHidden = false
+              self.pipeShapeTitle.isHidden = true
+
+
+
 
    
             
@@ -725,6 +739,20 @@ class ViewController: UIViewController {
         self.gasDensityTitle.isHidden = false
         self.dynamicVelocityTitle.isHidden = true
         self.ductPressureTitle.isHidden = false
+
+            
+              
+              self.areaTitle.isHidden = false
+              self.pipeShapeSwitch.isHidden = true
+              self.nonStandardAirSwitchTitle.isHidden = true
+              self.wetBulbSwitchTitle.isHidden = true
+              self.dryBulbTitle.isHidden = true
+              self.seaLevelTitle.isHidden = true
+              self.elevationTitle.isHidden = true
+              self.relativeHumidityTitle.isHidden = false
+              self.pitotTubeTitle.isHidden = true
+              self.pipeShapeTitle.isHidden = false
+
 
         
             
