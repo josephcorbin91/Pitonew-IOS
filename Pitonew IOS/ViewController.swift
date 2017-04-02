@@ -994,7 +994,7 @@ class ViewController: UIViewController {
     @IBAction func modifyDynamicVelocityList(_ sender: UIStepper) {
         
         
-        if(dynamicVelocityStepper.value > oldValue && oldValue >= 0){
+        if(dynamicVelocityStepper.value > oldValue && oldValue >= 0 && !dynamicVelocityEditText.text?.isEmpty){
             oldValue = oldValue + 1
             dynamicPresureArray.append(Double(dynamicVelocityEditText.text!)!)
             var dynamicPressureArrayString = ""
