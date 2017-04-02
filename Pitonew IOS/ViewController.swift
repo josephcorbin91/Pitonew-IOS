@@ -999,18 +999,18 @@ class ViewController: UIViewController {
             dynamicPresureArray.append(Double(dynamicVelocityEditText.text!)!)
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
-                dynamicPressureArrayString += String(dynamicPressure) + " "
+                dynamicPressureArrayString += String(dynamicPressure) + "\n"
             }
-            dynamicVelocityLabel.text = "DynamicValue" + String(dynamicVelocityStepper.value) + "Old Value" + String(oldValue) + dynamicPressureArrayString        }
+            dynamicVelocityLabel.text = dynamicPressureArrayString        }
         else {
             oldValue = oldValue - 1
             
             dynamicPresureArray.removeLast()
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
-                dynamicPressureArrayString += String(dynamicPressure) + " "
+                dynamicPressureArrayString += String(dynamicPressure) + "\n"
             }
-            dynamicVelocityLabel.text = "DynamicValue" + String(dynamicVelocityStepper.value) + "Old Value" + String(oldValue) + dynamicPressureArrayString        }
+            dynamicVelocityLabel.text = dynamicPressureArrayString        }
         
     }
     
