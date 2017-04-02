@@ -82,13 +82,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var dynamicVelocityTitle: UILabel!
     @IBOutlet weak var staticPressureTitle: UILabel!
     @IBOutlet weak var molecularWeightTitle: UILabel!
+    @IBOutlet weak var relativeHumidityUnit: UILabel!
+    @IBOutlet weak var elevationUnitLabel: UILabel!
     
+    @IBOutlet weak var heighTitle: UILabel!
     @IBOutlet weak var ductPressureTitle: UILabel!
     @IBOutlet weak var areaTitle: UILabel!
-    @IBOutlet weak var pipeShapeSwitch: UISwitch!
     @IBOutlet weak var nonStandardAirSwitchTitle: UILabel!
     @IBOutlet weak var wetBulbSwitchTitle: UILabel!
-    @IBOutlet weak var dryBulbTitle: UILabel!
     @IBOutlet weak var seaLevelTitle: UILabel!
     @IBOutlet weak var elevationTitle: UILabel!
     @IBOutlet weak var relativeHumidityTitle: UILabel!
