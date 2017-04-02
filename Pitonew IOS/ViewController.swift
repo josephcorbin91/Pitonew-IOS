@@ -270,6 +270,26 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segmentedControlindexChange(_ sender: Any) {
+       
+        /*switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            {
+            }
+            
+        case 1:
+            {
+        
+        }
+            
+        default:
+            break
+        }
+ */
+    }
+    
     @IBAction func unitSwitchClicked(_ sender: Any) {
         var width = Double(widthTextField.text!)
         var height = Double(heightTextField.text!)
@@ -413,12 +433,12 @@ class ViewController: UIViewController {
             if(dryBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            dryBulbTemperatureTextField.text = String((dryBulbTemperature! * 1.8) +32)
+            dryBulbTemperatureTextField.text = String((dryBulbTemperature! * 1.8)+32)
             }
             if(wetBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            wetBulbTemperatureTextField.text = String((wetBulbTemperature! * 1.8) +32)
+            wetBulbTemperatureTextField.text = String((wetBulbTemperature! * 1.8)+32)
             }
             if(pressureAtSeaLevelTextField.text?.isEmpty)!{
             }
