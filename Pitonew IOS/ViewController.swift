@@ -692,6 +692,12 @@ class ViewController: UIViewController {
               self.N2Label.isHidden = false
               self.O2LAbel.isHidden = false
             self.molecularWeightResultTitle.isHidden = true
+                        self.CO2TextField.isHidden = false
+            self.ArTextField.isHidden = false
+            self.N2TextField.isHidden = false
+            self.H20TextField.isHidden = false
+            self.O2TextField.isHidden = false
+
 
 
 
@@ -734,7 +740,13 @@ class ViewController: UIViewController {
                 self.relativeHumidityResultLabel.isHidden = false
                 
                 
-                
+
+                        self.CO2TextField.isHidden = true
+            self.ArTextField.isHidden = true
+            self.N2TextField.isHidden = true
+            self.H20TextField.isHidden = true
+            self.O2TextField.isHidden = true
+
                 self.AirCompositionSwitch.isHidden = true
                 self.wetBulbSwitch.isHidden = true
            //     self.pipeShapeSwitch.isHidden = true
