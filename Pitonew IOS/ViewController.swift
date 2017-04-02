@@ -215,8 +215,9 @@ class ViewController: UIViewController {
             self.H20TextField.isHidden = false
             self.O2TextField.isHidden = false
 
-
         
+        self.dynamicVelocityResult.isHidden = true
+        self.dynamicVelocityResultTitle.isHidden = true
         
         
     }
@@ -482,7 +483,8 @@ class ViewController: UIViewController {
               self.ArLabel.isHidden = true
               self.N2Label.isHidden = true
               self.O2LAbel.isHidden = true
-
+            self.dynamicVelocityResult.isHidden = false
+            self.dynamicVelocityResultTitle.isHidden = false
      
             
             
@@ -584,7 +586,8 @@ class ViewController: UIViewController {
             self.N2TextField.isHidden = false
             self.H20TextField.isHidden = false
             self.O2TextField.isHidden = false
-
+                self.dynamicVelocityResult.isHidden = true
+                self.dynamicVelocityResultTitle.isHidden = true
 
 
 
@@ -682,6 +685,8 @@ class ViewController: UIViewController {
               self.ArLabel.isHidden = true
               self.N2Label.isHidden = true
               self.O2LAbel.isHidden = true
+            self.dynamicVelocityResult.isHidden = false
+            self.dynamicVelocityResultTitle.isHidden = false
 
      
     
@@ -982,6 +987,8 @@ class ViewController: UIViewController {
     
     //Dynamic Velocity
     
+    @IBOutlet weak var dynamicVelocityResultTitle: UILabel!
+    @IBOutlet weak var dynamicVelocityResult: UILabel!
     
     @IBOutlet weak var dynamicVelocityStepper: UIStepper!
     @IBOutlet weak var dynamicVelocityLabel: UILabel!
@@ -994,13 +1001,13 @@ class ViewController: UIViewController {
     @IBAction func modifyDynamicVelocityList(_ sender: UIStepper) {
         
         
-        if(dynamicVelocityStepper.value > oldValue && oldValue >= 0 && !dynamicVelocityEditText.text?.isEmpty){
+        if(dynamicVelocityStepper.value > oldValue && oldValue >= 0 && !(dynamicVelocityEditText.text?.isEmpty)!){
             oldValue = oldValue + 1
             dynamicPresureArray.append(Double(dynamicVelocityEditText.text!)!)
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
-                dynamicPressureArrayString += String(dynamicPressure) + "\n"
-            }
+                dynamicPressureArrayString += String(dynamicPressure)         }
+            dynamicVelocityEditText.text = ""
             dynamicVelocityLabel.text = dynamicPressureArrayString        }
         else {
             oldValue = oldValue - 1
@@ -1008,7 +1015,7 @@ class ViewController: UIViewController {
             dynamicPresureArray.removeLast()
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
-                dynamicPressureArrayString += String(dynamicPressure) + "\n"
+                dynamicPressureArrayString += String(dynamicPressure) 
             }
             dynamicVelocityLabel.text = dynamicPressureArrayString        }
         
@@ -1023,6 +1030,10 @@ class ViewController: UIViewController {
         dynamicVelocityStepper.autorepeat = false
         dynamicVelocityStepper.maximumValue = 40
         dynamicVelocityStepper.minimumValue = 0
+        wetBulbSwitch.setOn(false,animated: false)
+        AirCompositionSwitch.setOn(false,animated: false)
+        pipeShapeSwitch.setOn(false, animated: false)
+    
         oldValue = dynamicVelocityStepper.value
          self.widthUnitLabel.isHidden = false
                 self.heightUnitLabel.isHidden = false
@@ -1110,7 +1121,9 @@ class ViewController: UIViewController {
             self.N2TextField.isHidden = false
             self.H20TextField.isHidden = false
             self.O2TextField.isHidden = false
-
+        self.dynamicVelocityResult.isHidden = true
+        self.dynamicVelocityResultTitle.isHidden = true
+        
         
         
 }

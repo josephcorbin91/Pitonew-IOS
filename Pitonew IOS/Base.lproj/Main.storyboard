@@ -601,6 +601,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXh-lT-wiU">
+                                <rect key="frame" x="16" y="510" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dynamic Velocity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrE-cS-MPb">
+                                <rect key="frame" x="13" y="481" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -638,6 +652,8 @@
                         <outlet property="ductPressureUnitLabel" destination="LEl-na-4qR" id="3WO-Gp-a8K"/>
                         <outlet property="dynamicVelocityEditText" destination="Izm-pK-2lW" id="Gs1-1L-OYW"/>
                         <outlet property="dynamicVelocityLabel" destination="s1v-4j-iRc" id="mbi-op-3Hv"/>
+                        <outlet property="dynamicVelocityResult" destination="EXh-lT-wiU" id="uQk-B5-6yl"/>
+                        <outlet property="dynamicVelocityResultTitle" destination="UrE-cS-MPb" id="ufH-xz-0cM"/>
                         <outlet property="dynamicVelocityStepper" destination="6Rj-9I-DDe" id="6dt-Gv-a0y"/>
                         <outlet property="dynamicVelocityTitle" destination="tIl-QH-yMd" id="et2-yf-EY5"/>
                         <outlet property="elevationAboveSeaLevelTextField" destination="Gpm-ta-i0w" id="R6z-Sy-DwE"/>
