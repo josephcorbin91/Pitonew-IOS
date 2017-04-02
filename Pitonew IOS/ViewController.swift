@@ -675,6 +675,11 @@ class ViewController: UIViewController {
               self.relativeHumidityTitle.isHidden = true
               self.pitotTubeTitle.isHidden = false
               self.pipeShapeTitle.isHidden = true
+            
+            
+              self.dynamicVelocityStepper.isHidden = true
+              self.dynamicVelocityLabel.isHidden = true
+              self.dynamicVelocityEditText.isHidden = true
 
 
 
@@ -752,7 +757,12 @@ class ViewController: UIViewController {
               self.relativeHumidityTitle.isHidden = false
               self.pitotTubeTitle.isHidden = true
               self.pipeShapeTitle.isHidden = false
-
+              self.dynamicVelocityStepper.isHidden = true
+              self.dynamicVelocityLabel.isHidden = true
+              self.dynamicVelocityEditText.isHidden = true
+    
+    @IBOutlet weak var heightLabel: UILabel!
+    
 
         
             
