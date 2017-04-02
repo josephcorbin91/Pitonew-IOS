@@ -133,13 +133,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-hy-ex9">
-                                <rect key="frame" x="329" y="164" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ieh-uZ-4Wo">
                                 <rect key="frame" x="270" y="202" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -682,6 +675,7 @@
                         <outlet property="massAirFlowResultLabel" destination="OPe-hO-Dm5" id="yck-a7-LRB"/>
                         <outlet property="massAirFlowTitle" destination="hbi-Ya-mG0" id="UOd-J7-T8S"/>
                         <outlet property="massAirFlowUnitLabel" destination="xct-uV-8d3" id="4R2-N8-BX5"/>
+                        <outlet property="molecularWeightResultTitle" destination="QOF-46-y5F" id="tFf-JY-VXn"/>
                         <outlet property="molecularWeightTextField" destination="D50-h5-dxc" id="LGN-X5-cWA"/>
                         <outlet property="molecularWeightTitle" destination="E4t-Qc-unz" id="UKa-gb-6B1"/>
                         <outlet property="nonStandardAirSwitchTitle" destination="sYs-Jg-IOc" id="Ijd-OP-vir"/>

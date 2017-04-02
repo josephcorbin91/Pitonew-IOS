@@ -94,6 +94,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var elevationTitle: UILabel!
     @IBOutlet weak var relativeHumidityTitle: UILabel!
     @IBOutlet weak var pitotTubeTitle: UILabel!
+    @IBOutlet weak var molecularWeightResultTitle: UILabel!
     
     @IBOutlet weak var pipeShapeTitle: UILabel!
     
@@ -678,8 +679,10 @@ class ViewController: UIViewController {
               self.relativeHumidityTitle.isHidden = true
               self.pitotTubeTitle.isHidden = false
               self.pipeShapeTitle.isHidden = false
-            
-            
+            self.wetBulbLabel.isHidden = false
+              self.relativeHumidityUnit.isHidden = true
+                self.elevationUnitLabel.isHidden = false
+                self.heighTitle.isHidden = false
               self.dynamicVelocityStepper.isHidden = false
               self.dynamicVelocityLabel.isHidden = false
               self.dynamicVelocityEditText.isHidden = false
@@ -688,6 +691,7 @@ class ViewController: UIViewController {
               self.ArLabel.isHidden = false
               self.N2Label.isHidden = false
               self.O2LAbel.isHidden = false
+            self.molecularWeightResultTitle.isHidden = true
 
 
 
@@ -697,15 +701,17 @@ class ViewController: UIViewController {
             
             
         case 1:
-            
-        
+            self.heighTitle.isHidden = true
+            self.wetBulbLabel.isHidden = true
+            self.elevationUnitLabel.isHidden = true
+            self.molecularWeightResultTitle.isHidden = false
                 self.widthUnitLabel.isHidden = true
                 self.heightUnitLabel.isHidden = true
                 self.dryBulbUnitLabel.isHidden = true
                 self.staticPressureUnitLabel.isHidden = true
                 self.pressureSeaLevelUnitLabel.isHidden = true
                 self.wetBulbUnitLabel.isHidden = true
-                
+                self.relativeHumidityUnit.isHidden = false
                 self.areaUnitLabel.isHidden = false
                 self.averageVelocityUnitLabel.isHidden = false
                 self.normalAirFlowUnitLabel.isHidden = false
@@ -755,7 +761,6 @@ class ViewController: UIViewController {
         self.gasDensityTitle.isHidden = false
         self.dynamicVelocityTitle.isHidden = true
         self.ductPressureTitle.isHidden = false
-            self.elevationUnitLabel.isHidden = false
 
                         self.staticPressureTitle.isHidden = true
 
