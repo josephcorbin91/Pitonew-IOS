@@ -1039,6 +1039,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+          
+        dryBulbTemperatureTextField.delegate = self
+        molecularWeightTextField.delegate = self
+        staticPressureTextField.delegate = self
+        elevationAboveSeaLevelTextField.delegate = self
+        wetBulbTemperatureTextField.delegate = self
+        pitotTubeCoeffecientTextField.delegate = self
+
+        pressureAtSeaLevelTextField.delegate = self
+        CO2TextField.delegate = self
+        N2TextField.delegate = self
+        ArTextField.delegate = self
+        H20TextField.delegate = self
+
+        heightTextField.delegate = self
+        O2TextField.delagete = self
         widthTextField.delegate = self
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
         dynamicVelocityStepper.wraps = false
