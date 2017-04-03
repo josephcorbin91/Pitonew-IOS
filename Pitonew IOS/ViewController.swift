@@ -109,8 +109,9 @@ class ViewController: UIViewController {
         return average
     }
     
+    @IBAction func clearButton(_ sender: Any) {
     
-    @IBAction func toolbarClearButton(_ sender: Any) {
+    
         widthTextField.text="1"
         heightTextField.text="1"
         molecularWeightTextField.text="28.96"
@@ -125,6 +126,8 @@ class ViewController: UIViewController {
         N2TextField.text="78.09"
         O2TextField.text="0.93"
         H20TextField.text="0.0"
+        dynamicPresureArray.append(1.0)
+        dynamicPresureArray.append(1.0)
         
         
         
@@ -222,8 +225,9 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func toolbarCalculateButton(_ sender: Any) {
-        
+    
+    @IBAction func calculateButton(_ sender: Any) {
+    
         if((widthTextField.text?.isEmpty)! || (heightTextField.text?.isEmpty)! || (pitotTubeCoeffecientTextField.text?.isEmpty)! || (staticPressureTextField.text?.isEmpty)! || (dryBulbTemperatureTextField.text?.isEmpty)! || (elevationAboveSeaLevelTextField.text?.isEmpty)! || (wetBulbTemperatureTextField.text?.isEmpty)! || (pressureAtSeaLevelTextField.text?.isEmpty)! || (molecularWeightTextField.text?.isEmpty)!) //|| (CO2TextField.text?.isEmpty)! || (O2TextField.text?.isEmpty)! || (N2TextField.text?.isEmpty)! || (ArTextField.text?.isEmpty)! || (H20TextField.text?.isEmpty)!)
         {
             
@@ -1012,7 +1016,9 @@ class ViewController: UIViewController {
         else {
             oldValue = oldValue - 1
             
+            if(dynamicPresureArray.count > 0){
             dynamicPresureArray.removeLast()
+            }
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
                 dynamicPressureArrayString += String(dynamicPressure) 
@@ -1123,8 +1129,11 @@ class ViewController: UIViewController {
             self.O2TextField.isHidden = false
         self.dynamicVelocityResult.isHidden = true
         self.dynamicVelocityResultTitle.isHidden = true
-        
-        
+        var dynamicPressureArrayString = ""
+        for dynamicPressure in dynamicPresureArray {
+            dynamicPressureArrayString += String(dynamicPressure)
+        }
+        dynamicVelocityLabel.text = dynamicPressureArrayString
         
 }
     override func didReceiveMemoryWarning() {

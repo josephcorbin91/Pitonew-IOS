@@ -582,22 +582,25 @@
                                 <rect key="frame" x="-11" y="1320" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="wxp-vc-8uz"/>
-                                    <barButtonItem title="Calculate" id="7Q0-m5-Ikv">
-                                        <connections>
-                                            <action selector="toolbarCalculateButton:" destination="BYZ-38-t0r" id="QYS-T4-2bF"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="VEA-aL-Tj9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N5m-1f-Oih">
+                                            <rect key="frame" x="20" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Calculate"/>
+                                            <connections>
+                                                <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchDown" id="naT-Zb-moy"/>
+                                            </connections>
+                                        </button>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="5Ck-EC-3tK"/>
-                                    <barButtonItem title="Clear" style="plain" id="F6j-Tj-kiS">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q0z-RB-7Kh">
-                                            <rect key="frame" x="188" y="7" width="46" height="30"/>
+                                    <barButtonItem style="plain" id="s8C-cT-dMR">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Lp-6m-e5E">
+                                            <rect key="frame" x="76" y="7" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Clear"/>
+                                            <connections>
+                                                <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchDown" id="mhS-yf-kpb"/>
+                                            </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="toolbarClearButton:" destination="BYZ-38-t0r" id="POd-yb-Rht"/>
-                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
