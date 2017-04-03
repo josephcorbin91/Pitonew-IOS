@@ -39,9 +39,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //Results
     @IBOutlet weak var averageVelocityResultLabel: UILabel!
-    @IBOutlet weak var areaResultLabel: UILabel!
     @IBOutlet weak var normalAirFlowResultLabel: UILabel!
     
+    @IBOutlet weak var areaResultLabel: UILabel!
     @IBOutlet weak var gasDensityResultLabel: UILabel!
     @IBOutlet weak var ductPressureResultLabel: UILabel!
     @IBOutlet weak var actualAirFlowResultLabel: UILabel!
@@ -51,6 +51,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //TextFields
     
     @IBOutlet weak var widthTextField: UITextField!
+    //@IBOutlet weak var widthTextField: UITextField!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var molecularWeightTextField: UITextField!
     @IBOutlet weak var dryBulbTemperatureTextField: UITextField!
@@ -128,7 +129,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         H20TextField.text="0.0"
         dynamicPresureArray.append(1.0)
         dynamicPresureArray.append(1.0)
-        
+        segmentedControl.selectedSegmentIndex = 0
         
         
                 self.widthUnitLabel.isHidden = false
@@ -221,6 +222,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.dynamicVelocityResult.isHidden = true
         self.dynamicVelocityResultTitle.isHidden = true
+        
+        self.pipeShapeSwitch.isHidden = true
+        self.pipeShapeTitle.isHidden = true
+        self.wetBulbSwitch.isHidden = true
+        self.wetBulbSwitchTitle.isHidden = true
+        self.nonStandardAirSwitchTitle.isHidden = true
+        self.AirCompositionSwitch.isHidden = true
         
         
     }
@@ -489,6 +497,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
               self.O2LAbel.isHidden = true
             self.dynamicVelocityResult.isHidden = false
             self.dynamicVelocityResultTitle.isHidden = false
+            segmentedControl.selectedSegmentIndex = 1
      
             
             
@@ -977,13 +986,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if(pipeShapeSwitch.isOn){
             widthUnitLabel.text = "Diameter"
-            heightLabel.isHidden = true
+            heighTitle.isHidden = true
             heightTextField.isHidden = true
             heightUnitLabel.isHidden = true
         }
         else{
             widthUnitLabel.text = "Width"
-            heightLabel.isHidden = false
+            heighTitle.isHidden = false
             heightTextField.isHidden = false
             heightUnitLabel.isHidden = false
         }
