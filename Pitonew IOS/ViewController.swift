@@ -10,7 +10,7 @@ import UIKit
 import Foundation //Generic
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var widthUnitLabel: UILabel!
     @IBOutlet weak var heightUnitLabel: UILabel!
@@ -1029,9 +1029,18 @@ class ViewController: UIViewController {
     
  
     var oldValue : Double = 0.0
+    func dismissKeyboard() {
+        widthTextField.resignFirstResponder()
+    }
     
+     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        widthTextField.resignFirstResponder()
+        return true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        widthTextField.delegate = self
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
         dynamicVelocityStepper.wraps = false
         dynamicVelocityStepper.autorepeat = false
         dynamicVelocityStepper.maximumValue = 40
