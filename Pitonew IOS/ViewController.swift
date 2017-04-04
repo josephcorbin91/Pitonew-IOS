@@ -70,7 +70,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var H20TextField: UITextField!
     
     @IBOutlet weak var O2TextField: UITextField!
-    //Area 
+    
+    
+    //Views
+    @IBOutlet weak var Line4: UIView!
+    @IBOutlet weak var Line2: UIView!
+    @IBOutlet weak var Line13: UIView!
+    //Area
     
     @IBOutlet weak var widthTitle: UILabel!
     @IBOutlet weak var velocityAverageTitle: UILabel!
@@ -132,6 +138,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         segmentedControl.selectedSegmentIndex = 0
         
         
+        self.Line2.isHidden = true
+        self.Line4.isHidden = true
                 self.widthUnitLabel.isHidden = false
                 self.heightUnitLabel.isHidden = false
                 self.dryBulbUnitLabel.isHidden = false
@@ -236,7 +244,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculateButton(_ sender: Any) {
     
-        if((widthTextField.text?.isEmpty)! || (heightTextField.text?.isEmpty)! || (pitotTubeCoeffecientTextField.text?.isEmpty)! || (staticPressureTextField.text?.isEmpty)! || (dryBulbTemperatureTextField.text?.isEmpty)! || (elevationAboveSeaLevelTextField.text?.isEmpty)! || (wetBulbTemperatureTextField.text?.isEmpty)! || (pressureAtSeaLevelTextField.text?.isEmpty)! || (molecularWeightTextField.text?.isEmpty)!) //|| (CO2TextField.text?.isEmpty)! || (O2TextField.text?.isEmpty)! || (N2TextField.text?.isEmpty)! || (ArTextField.text?.isEmpty)! || (H20TextField.text?.isEmpty)!)
+        if((widthTextField.text?.isEmpty)! || (heightTextField.text?.isEmpty)! || (pitotTubeCoeffecientTextField.text?.isEmpty)! || (staticPressureTextField.text?.isEmpty)! || (dryBulbTemperatureTextField.text?.isEmpty)! || (elevationAboveSeaLevelTextField.text?.isEmpty)! || (wetBulbTemperatureTextField.text?.isEmpty)! || (pressureAtSeaLevelTextField.text?.isEmpty)!) //|| (molecularWeightTextField.text?.isEmpty)!) || (CO2TextField.text?.isEmpty)! || (O2TextField.text?.isEmpty)! || (N2TextField.text?.isEmpty)! || (ArTextField.text?.isEmpty)! || (H20TextField.text?.isEmpty)!)
         {
             
         }
@@ -406,7 +414,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: ductPressure as NSNumber)
             gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: gasDensity as NSNumber)
             
-            
+            self.Line2.isHidden = false
+            self.Line4.isHidden = false
+            self.widthUnitLabel.isHidden = false
             self.heighTitle.isHidden = true
             self.wetBulbLabel.isHidden = true
             self.elevationUnitLabel.isHidden = true
@@ -519,7 +529,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.staticPressureUnitLabel.isHidden = false
                 self.pressureSeaLevelUnitLabel.isHidden = false
                 self.wetBulbUnitLabel.isHidden = false
-                
+                self.Line2.isHidden = true
+                self.Line4.isHidden = true
                 self.areaUnitLabel.isHidden = true
                 self.averageVelocityUnitLabel.isHidden = true
                 self.normalAirFlowUnitLabel.isHidden = true
@@ -641,8 +652,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.massAirFlowResultLabel.isHidden = false
                 self.atmosphericPressureResultLabel.isHidden = false
                 self.relativeHumidityResultLabel.isHidden = false
-                
-                
+            self.Line2.isHidden = false
+            self.Line4.isHidden = false
+            
 
                         self.CO2TextField.isHidden = true
             self.ArTextField.isHidden = true
