@@ -129,9 +129,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pressureAtSeaLevelTextField.text="1"
         pitotTubeCoeffecientTextField.text="1"
         CO2TextField.text="0.03"
-        ArTextField.text="20.95"
+        ArTextField.text="0.93"
         N2TextField.text="78.09"
-        O2TextField.text="0.93"
+        O2TextField.text="20.95"
         H20TextField.text="0.0"
         dynamicPresureArray.append(1.0)
         dynamicPresureArray.append(1.0)
@@ -376,7 +376,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let averageVelocity = average(nums: dynamicVelocityArray)
             let actualAirFlow = averageVelocity*area*3600
             let massAirFlow=actualAirFlow*gasDensity/3600;
-            let normalAirFlow = actualAirFlow*ductPressure/101.325*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
+            let normalAirFlow = (actualAirFlow*ductPressure/101.325)*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
             
             
             
