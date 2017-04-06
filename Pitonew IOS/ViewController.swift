@@ -117,8 +117,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func clearButton(_ sender: Any) {
-    
-    
+        
+        
         widthTextField.text="1"
         heightTextField.text="1"
         molecularWeightTextField.text="28.96"
@@ -140,52 +140,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.Line2.isHidden = true
         self.Line4.isHidden = true
-                self.widthUnitLabel.isHidden = false
-                self.heightUnitLabel.isHidden = false
-                self.dryBulbUnitLabel.isHidden = false
-                self.staticPressureUnitLabel.isHidden = false
-                self.pressureSeaLevelUnitLabel.isHidden = false
-                self.wetBulbUnitLabel.isHidden = false
-                
-                self.areaUnitLabel.isHidden = true
-                self.averageVelocityUnitLabel.isHidden = true
-                self.normalAirFlowUnitLabel.isHidden = true
-                self.atmosphericPressureUnitLabel.isHidden = true
-                self.actualAirFlowUnitLabel.isHidden = true
-                self.massAirFlowUnitLabel.isHidden = true
-                self.ductPressureUnitLabel.isHidden = true
-                self.gasDensityUnitLabel.isHidden = true
-                
-                self.averageVelocityResultLabel.isHidden = true
-                self.areaResultLabel.isHidden = true
-                self.normalAirFlowResultLabel.isHidden = true
-                self.gasDensityResultLabel.isHidden = true
-                self.ductPressureResultLabel.isHidden = true
-                self.actualAirFlowResultLabel.isHidden = true
-                self.massAirFlowResultLabel.isHidden = true
-                self.atmosphericPressureResultLabel.isHidden = true
-                self.relativeHumidityResultLabel.isHidden = true
-                
-                
-                
-                self.AirCompositionSwitch.isHidden = false
-                self.wetBulbSwitch.isHidden = false
-                //self.pipeShapeSwitch.isHidden = false
-                self.CO2Label.isHidden = false
-  
-                
-                self.widthTextField.isHidden = false
-                self.heightTextField.isHidden = false
-                self.molecularWeightTextField.isHidden = false
-                self.dryBulbTemperatureTextField.isHidden = false
-                self.staticPressureTextField.isHidden = false
-                self.elevationAboveSeaLevelTextField.isHidden = false
-                self.wetBulbTemperatureTextField.isHidden = false
-                self.pitotTubeCoeffecientTextField.isHidden = false
-                self.pressureAtSeaLevelTextField.isHidden = false
-                            self.elevationUnitLabel.isHidden = false
-
-                
+        self.widthUnitLabel.isHidden = false
+        self.heightUnitLabel.isHidden = false
+        self.dryBulbUnitLabel.isHidden = false
+        self.staticPressureUnitLabel.isHidden = false
+        self.pressureSeaLevelUnitLabel.isHidden = false
+        self.wetBulbUnitLabel.isHidden = false
+        
+        self.areaUnitLabel.isHidden = true
+        self.averageVelocityUnitLabel.isHidden = true
+        self.normalAirFlowUnitLabel.isHidden = true
+        self.atmosphericPressureUnitLabel.isHidden = true
+        self.actualAirFlowUnitLabel.isHidden = true
+        self.massAirFlowUnitLabel.isHidden = true
+        self.ductPressureUnitLabel.isHidden = true
+        self.gasDensityUnitLabel.isHidden = true
+        
+        self.averageVelocityResultLabel.isHidden = true
+        self.areaResultLabel.isHidden = true
+        self.normalAirFlowResultLabel.isHidden = true
+        self.gasDensityResultLabel.isHidden = true
+        self.ductPressureResultLabel.isHidden = true
+        self.actualAirFlowResultLabel.isHidden = true
+        self.massAirFlowResultLabel.isHidden = true
+        self.atmosphericPressureResultLabel.isHidden = true
+        self.relativeHumidityResultLabel.isHidden = true
+        
+        
+        
+        self.AirCompositionSwitch.isHidden = false
+        self.wetBulbSwitch.isHidden = false
+        //self.pipeShapeSwitch.isHidden = false
+        self.CO2Label.isHidden = false
+        
+        
+        self.widthTextField.isHidden = false
+        self.heightTextField.isHidden = false
+        self.molecularWeightTextField.isHidden = false
+        self.dryBulbTemperatureTextField.isHidden = false
+        self.staticPressureTextField.isHidden = false
+        self.elevationAboveSeaLevelTextField.isHidden = false
+        self.wetBulbTemperatureTextField.isHidden = false
+        self.pitotTubeCoeffecientTextField.isHidden = false
+        self.pressureAtSeaLevelTextField.isHidden = false
+        self.elevationUnitLabel.isHidden = false
+        
+        
         self.widthTitle.isHidden = false
         self.velocityAverageTitle.isHidden = true
         self.normalAirFlowTitle.isHidden = true
@@ -196,37 +196,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.gasDensityTitle.isHidden = true
         self.dynamicVelocityTitle.isHidden = false
         self.ductPressureTitle.isHidden = true
-            self.staticPressureTitle.isHidden = false
-            self.molecularWeightTitle.isHidden = false
-              self.areaTitle.isHidden = true
-              self.pipeShapeSwitch.isHidden = false
-              self.nonStandardAirSwitchTitle.isHidden = false
-              self.wetBulbSwitchTitle.isHidden = false
-              self.dryBulbTitle.isHidden = false
-              self.seaLevelTitle.isHidden = false
-              self.elevationTitle.isHidden = false
-              self.relativeHumidityTitle.isHidden = true
-              self.pitotTubeTitle.isHidden = false
-              self.pipeShapeTitle.isHidden = false
-            self.wetBulbLabel.isHidden = false
-              self.relativeHumidityUnit.isHidden = true
-                self.elevationUnitLabel.isHidden = false
-                self.heighTitle.isHidden = false
-              self.dynamicVelocityStepper.isHidden = false
-              self.dynamicVelocityLabel.isHidden = false
-              self.dynamicVelocityEditText.isHidden = false
-              self.CO2Label.isHidden = false
-              self.H2OLabel.isHidden = false
-              self.ArLabel.isHidden = false
-              self.N2Label.isHidden = false
-              self.O2LAbel.isHidden = false
-            self.molecularWeightResultTitle.isHidden = true
-                        self.CO2TextField.isHidden = false
-            self.ArTextField.isHidden = false
-            self.N2TextField.isHidden = false
-            self.H20TextField.isHidden = false
-            self.O2TextField.isHidden = false
-
+        self.staticPressureTitle.isHidden = false
+        self.molecularWeightTitle.isHidden = false
+        self.areaTitle.isHidden = true
+        self.pipeShapeSwitch.isHidden = false
+        self.nonStandardAirSwitchTitle.isHidden = false
+        self.wetBulbSwitchTitle.isHidden = false
+        self.dryBulbTitle.isHidden = false
+        self.seaLevelTitle.isHidden = false
+        self.elevationTitle.isHidden = false
+        self.relativeHumidityTitle.isHidden = true
+        self.pitotTubeTitle.isHidden = false
+        self.pipeShapeTitle.isHidden = false
+        self.wetBulbLabel.isHidden = false
+        self.relativeHumidityUnit.isHidden = true
+        self.elevationUnitLabel.isHidden = false
+        self.heighTitle.isHidden = false
+        self.dynamicVelocityStepper.isHidden = false
+        self.dynamicVelocityLabel.isHidden = false
+        self.dynamicVelocityEditText.isHidden = false
+        self.CO2Label.isHidden = false
+        self.H2OLabel.isHidden = false
+        self.ArLabel.isHidden = false
+        self.N2Label.isHidden = false
+        self.O2LAbel.isHidden = false
+        self.molecularWeightResultTitle.isHidden = true
+        self.CO2TextField.isHidden = false
+        self.ArTextField.isHidden = false
+        self.N2TextField.isHidden = false
+        self.H20TextField.isHidden = false
+        self.O2TextField.isHidden = false
+        
         
         self.dynamicVelocityResult.isHidden = true
         self.dynamicVelocityResultTitle.isHidden = true
@@ -243,7 +243,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func calculateButton(_ sender: Any) {
-    
+        
         if((widthTextField.text?.isEmpty)! || (heightTextField.text?.isEmpty)! || (pitotTubeCoeffecientTextField.text?.isEmpty)! || (staticPressureTextField.text?.isEmpty)! || (dryBulbTemperatureTextField.text?.isEmpty)! || (elevationAboveSeaLevelTextField.text?.isEmpty)! || (wetBulbTemperatureTextField.text?.isEmpty)! || (pressureAtSeaLevelTextField.text?.isEmpty)!) //|| (molecularWeightTextField.text?.isEmpty)!) || (CO2TextField.text?.isEmpty)! || (O2TextField.text?.isEmpty)! || (N2TextField.text?.isEmpty)! || (ArTextField.text?.isEmpty)! || (H20TextField.text?.isEmpty)!)
         {
             
@@ -279,6 +279,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let criticalPressureH20 = 166818.0;
             let criticalTemperatureH20 = 1165.67;
             let pressMmHg=754.30;
+            let area: Double
+            let atmosphericPressure: Double
+            let ductPressure: Double
+            let gasDensity: Double
+            
+            var dynamicVelocityArray = [Double]()
+            
+            let averageVelocity: Double
+            let actualAirFlow: Double
+            let massAirFlow: Double
+            let normalAirFlow: Double
+            
+            
             var humidityH20DryAir:Double
             
             if(wetBulbSwitch.isOn){
@@ -363,20 +376,69 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             
             
-            
-            let area = width!*height!
-            let atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!);
-            let ductPressure = atmosphericPressure + staticPressure!*0.249088
-            let gasDensity = 1000 * ductPressure / (273.15 + dryBulbTemperature!) / (8314.3 / molecularWeight!)
-            
-            var dynamicVelocityArray = [Double]()
-            for item in dynamicPressureArray {
-                dynamicVelocityArray.append(pilotTubeCoeffecient!*pow(2*item*1000/4.01864/gasDensity,0.5))
+            if(pipeShapeSwitch.isOn){
+                area = Double.pi * pow(height! / 2, 2.0)
             }
-            let averageVelocity = average(nums: dynamicVelocityArray)
-            let actualAirFlow = averageVelocity*area*3600
-            let massAirFlow=actualAirFlow*gasDensity/3600;
-            let normalAirFlow = (actualAirFlow*ductPressure/101.325)*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
+            else{
+                area = width!*height!
+            }
+            
+            atmosphericPressure = seaLevelPressure!*pow(10, -0.00001696*elevationAboveSealevel!)
+            if(UnitSwitch.isOn){
+			             ductPressure = atmosphericPressure + staticPressure!*0.249088
+                
+            }
+            else{
+			             ductPressure = atmosphericPressure + staticPressure!*0.07355
+                
+            }
+            
+            if(UnitSwitch.isOn){
+                gasDensity = 1000 * ductPressure / (273.15 + dryBulbTemperature!) / (8314.3 / molecularWeight!)
+                
+            }
+            else{
+                
+                var part1 = ((dryBulbTemperature!-32)*(5/9))
+                var part2 = (ductPressure*3.386375)
+                gasDensity = 0.062428*(1000 * part2 / (273.15 +  part1 / (8314.3 / molecularWeight!)))
+            }
+            
+            if(UnitSwitch.isOn){
+                for item in dynamicPressureArray {
+                    dynamicVelocityArray.append(pilotTubeCoeffecient!*pow(2*item*1000/4.01864/gasDensity,0.5))
+                }
+            }
+            else{
+                for item in dynamicPressureArray {
+                    
+                    dynamicVelocityArray.append(pilotTubeCoeffecient!*pow(2*item*1000/4.01864/(gasDensity / 0.062428),0.5) * 3.2804)
+                }
+            }
+            averageVelocity = average(nums: dynamicVelocityArray)
+            if(UnitSwitch.isOn){
+                actualAirFlow = averageVelocity*area*3600
+                
+            }
+            else{
+                actualAirFlow = ((averageVelocity*0.3048)*(area*0.00064516)*3600)*pow((39.3701/12),3)/60
+            }
+            if(UnitSwitch.isOn){
+                massAirFlow=actualAirFlow*gasDensity/3600
+                
+            }
+            else{
+                massAirFlow=(actualAirFlow*60/pow((39.3701/12),3)*(gasDensity/0.062428)/3600)*2.2046*60
+            }
+            if(UnitSwitch.isOn){
+                normalAirFlow = (actualAirFlow*ductPressure/101.325)*273.15/(273.15+((dryBulbTemperature!-32)/1.8))
+                
+            }
+            else{
+                normalAirFlow=(actualAirFlow*60/(pow(39.3701/12,3))*(ductPressure/0.2953)/101.325)*273.15/(273.15+dryBulbTemperature!)/60*pow((39.3701/12),3)*(294.26/273.15);
+                
+            }
+            
             
             
             
@@ -421,203 +483,203 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.wetBulbLabel.isHidden = true
             self.elevationUnitLabel.isHidden = true
             self.molecularWeightResultTitle.isHidden = false
-                self.widthUnitLabel.isHidden = true
-                self.heightUnitLabel.isHidden = true
-                self.dryBulbUnitLabel.isHidden = true
-                self.staticPressureUnitLabel.isHidden = true
-                self.pressureSeaLevelUnitLabel.isHidden = true
-                self.wetBulbUnitLabel.isHidden = true
-                self.relativeHumidityUnit.isHidden = false
-                self.areaUnitLabel.isHidden = false
-                self.averageVelocityUnitLabel.isHidden = false
-                self.normalAirFlowUnitLabel.isHidden = false
-                self.atmosphericPressureUnitLabel.isHidden = false
-                self.actualAirFlowUnitLabel.isHidden = false
-                self.massAirFlowUnitLabel.isHidden = false
-                self.ductPressureUnitLabel.isHidden = false
-                self.gasDensityUnitLabel.isHidden = false
-                self.molecularWeightTitle.isHidden = true
-                            self.elevationUnitLabel.isHidden = true
-
-                self.averageVelocityResultLabel.isHidden = false
-                self.areaResultLabel.isHidden = false
-                self.normalAirFlowResultLabel.isHidden = false
-                self.gasDensityResultLabel.isHidden = false
-                self.ductPressureResultLabel.isHidden = false
-                self.actualAirFlowResultLabel.isHidden = false
-                self.massAirFlowResultLabel.isHidden = false
-                self.atmosphericPressureResultLabel.isHidden = false
-                self.relativeHumidityResultLabel.isHidden = false
-                
-                
-
-                        self.CO2TextField.isHidden = true
+            self.widthUnitLabel.isHidden = true
+            self.heightUnitLabel.isHidden = true
+            self.dryBulbUnitLabel.isHidden = true
+            self.staticPressureUnitLabel.isHidden = true
+            self.pressureSeaLevelUnitLabel.isHidden = true
+            self.wetBulbUnitLabel.isHidden = true
+            self.relativeHumidityUnit.isHidden = false
+            self.areaUnitLabel.isHidden = false
+            self.averageVelocityUnitLabel.isHidden = false
+            self.normalAirFlowUnitLabel.isHidden = false
+            self.atmosphericPressureUnitLabel.isHidden = false
+            self.actualAirFlowUnitLabel.isHidden = false
+            self.massAirFlowUnitLabel.isHidden = false
+            self.ductPressureUnitLabel.isHidden = false
+            self.gasDensityUnitLabel.isHidden = false
+            self.molecularWeightTitle.isHidden = true
+            self.elevationUnitLabel.isHidden = true
+            
+            self.averageVelocityResultLabel.isHidden = false
+            self.areaResultLabel.isHidden = false
+            self.normalAirFlowResultLabel.isHidden = false
+            self.gasDensityResultLabel.isHidden = false
+            self.ductPressureResultLabel.isHidden = false
+            self.actualAirFlowResultLabel.isHidden = false
+            self.massAirFlowResultLabel.isHidden = false
+            self.atmosphericPressureResultLabel.isHidden = false
+            self.relativeHumidityResultLabel.isHidden = false
+            
+            
+            
+            self.CO2TextField.isHidden = true
             self.ArTextField.isHidden = true
             self.N2TextField.isHidden = true
             self.H20TextField.isHidden = true
             self.O2TextField.isHidden = true
-
-                self.AirCompositionSwitch.isHidden = true
-                self.wetBulbSwitch.isHidden = true
-           //     self.pipeShapeSwitch.isHidden = true
-                self.CO2Label.isHidden = true
-  
-                
-                self.widthTextField.isHidden = true
-                self.heightTextField.isHidden = true
-                self.molecularWeightTextField.isHidden = true
-                self.dryBulbTemperatureTextField.isHidden = true
-                self.staticPressureTextField.isHidden = true
-                self.elevationAboveSeaLevelTextField.isHidden = true
-                self.wetBulbTemperatureTextField.isHidden = true
-                self.pitotTubeCoeffecientTextField.isHidden = true
-                self.pressureAtSeaLevelTextField.isHidden = true
-                
-             self.widthTitle.isHidden = true
-        self.velocityAverageTitle.isHidden = false
-        self.normalAirFlowTitle.isHidden = false
-        self.dryBulbTitle.isHidden = true
-        self.atmoshpericPressureTItle.isHidden = false
-        self.massAirFlowTitle.isHidden = false
-        self.actualAirFlowTitle.isHidden = false
-        self.gasDensityTitle.isHidden = false
-        self.dynamicVelocityTitle.isHidden = true
-        self.ductPressureTitle.isHidden = false
-
-                        self.staticPressureTitle.isHidden = true
-
-              
-              self.areaTitle.isHidden = false
-              self.pipeShapeSwitch.isHidden = true
-              self.nonStandardAirSwitchTitle.isHidden = true
-              self.wetBulbSwitchTitle.isHidden = true
-              self.dryBulbTitle.isHidden = true
-              self.seaLevelTitle.isHidden = true
-              self.elevationTitle.isHidden = true
-              self.relativeHumidityTitle.isHidden = false
-              self.pitotTubeTitle.isHidden = true
-              self.pipeShapeTitle.isHidden = true
-              self.dynamicVelocityStepper.isHidden = true
-              self.dynamicVelocityLabel.isHidden = true
-              self.dynamicVelocityEditText.isHidden = true
-              self.CO2Label.isHidden = true
-              self.H2OLabel.isHidden = true
-              self.ArLabel.isHidden = true
-              self.N2Label.isHidden = true
-              self.O2LAbel.isHidden = true
+            
+            self.AirCompositionSwitch.isHidden = true
+            self.wetBulbSwitch.isHidden = true
+            //     self.pipeShapeSwitch.isHidden = true
+            self.CO2Label.isHidden = true
+            
+            
+            self.widthTextField.isHidden = true
+            self.heightTextField.isHidden = true
+            self.molecularWeightTextField.isHidden = true
+            self.dryBulbTemperatureTextField.isHidden = true
+            self.staticPressureTextField.isHidden = true
+            self.elevationAboveSeaLevelTextField.isHidden = true
+            self.wetBulbTemperatureTextField.isHidden = true
+            self.pitotTubeCoeffecientTextField.isHidden = true
+            self.pressureAtSeaLevelTextField.isHidden = true
+            
+            self.widthTitle.isHidden = true
+            self.velocityAverageTitle.isHidden = false
+            self.normalAirFlowTitle.isHidden = false
+            self.dryBulbTitle.isHidden = true
+            self.atmoshpericPressureTItle.isHidden = false
+            self.massAirFlowTitle.isHidden = false
+            self.actualAirFlowTitle.isHidden = false
+            self.gasDensityTitle.isHidden = false
+            self.dynamicVelocityTitle.isHidden = true
+            self.ductPressureTitle.isHidden = false
+            
+            self.staticPressureTitle.isHidden = true
+            
+            
+            self.areaTitle.isHidden = false
+            self.pipeShapeSwitch.isHidden = true
+            self.nonStandardAirSwitchTitle.isHidden = true
+            self.wetBulbSwitchTitle.isHidden = true
+            self.dryBulbTitle.isHidden = true
+            self.seaLevelTitle.isHidden = true
+            self.elevationTitle.isHidden = true
+            self.relativeHumidityTitle.isHidden = false
+            self.pitotTubeTitle.isHidden = true
+            self.pipeShapeTitle.isHidden = true
+            self.dynamicVelocityStepper.isHidden = true
+            self.dynamicVelocityLabel.isHidden = true
+            self.dynamicVelocityEditText.isHidden = true
+            self.CO2Label.isHidden = true
+            self.H2OLabel.isHidden = true
+            self.ArLabel.isHidden = true
+            self.N2Label.isHidden = true
+            self.O2LAbel.isHidden = true
             self.dynamicVelocityResult.isHidden = false
             self.dynamicVelocityResultTitle.isHidden = false
             segmentedControl.selectedSegmentIndex = 1
-     
             
             
             
             
-             }
+            
+        }
         
         
     }
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentedControlindexChange(_ sender: Any) {
-       
+        
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             
-                self.widthUnitLabel.isHidden = false
-                self.heightUnitLabel.isHidden = false
-                self.dryBulbUnitLabel.isHidden = false
-                self.staticPressureUnitLabel.isHidden = false
-                self.pressureSeaLevelUnitLabel.isHidden = false
-                self.wetBulbUnitLabel.isHidden = false
-                self.Line2.isHidden = true
-                self.Line4.isHidden = true
-                self.areaUnitLabel.isHidden = true
-                self.averageVelocityUnitLabel.isHidden = true
-                self.normalAirFlowUnitLabel.isHidden = true
-                self.atmosphericPressureUnitLabel.isHidden = true
-                self.actualAirFlowUnitLabel.isHidden = true
-                self.massAirFlowUnitLabel.isHidden = true
-                self.ductPressureUnitLabel.isHidden = true
-                self.gasDensityUnitLabel.isHidden = true
-                
-                self.averageVelocityResultLabel.isHidden = true
-                self.areaResultLabel.isHidden = true
-                self.normalAirFlowResultLabel.isHidden = true
-                self.gasDensityResultLabel.isHidden = true
-                self.ductPressureResultLabel.isHidden = true
-                self.actualAirFlowResultLabel.isHidden = true
-                self.massAirFlowResultLabel.isHidden = true
-                self.atmosphericPressureResultLabel.isHidden = true
-                self.relativeHumidityResultLabel.isHidden = true
-                
-                
-                
-                self.AirCompositionSwitch.isHidden = false
-                self.wetBulbSwitch.isHidden = false
-                //self.pipeShapeSwitch.isHidden = false
-                self.CO2Label.isHidden = false
-  
-                
-                self.widthTextField.isHidden = false
-                self.heightTextField.isHidden = false
-                self.molecularWeightTextField.isHidden = false
-                self.dryBulbTemperatureTextField.isHidden = false
-                self.staticPressureTextField.isHidden = false
-                self.elevationAboveSeaLevelTextField.isHidden = false
-                self.wetBulbTemperatureTextField.isHidden = false
-                self.pitotTubeCoeffecientTextField.isHidden = false
-                self.pressureAtSeaLevelTextField.isHidden = false
-                            self.elevationUnitLabel.isHidden = false
-
-                
-        self.widthTitle.isHidden = false
-        self.velocityAverageTitle.isHidden = true
-        self.normalAirFlowTitle.isHidden = true
-        self.dryBulbTitle.isHidden = false
-        self.atmoshpericPressureTItle.isHidden = true
-        self.massAirFlowTitle.isHidden = true
-        self.actualAirFlowTitle.isHidden = true
-        self.gasDensityTitle.isHidden = true
-        self.dynamicVelocityTitle.isHidden = false
-        self.ductPressureTitle.isHidden = true
+            self.widthUnitLabel.isHidden = false
+            self.heightUnitLabel.isHidden = false
+            self.dryBulbUnitLabel.isHidden = false
+            self.staticPressureUnitLabel.isHidden = false
+            self.pressureSeaLevelUnitLabel.isHidden = false
+            self.wetBulbUnitLabel.isHidden = false
+            self.Line2.isHidden = true
+            self.Line4.isHidden = true
+            self.areaUnitLabel.isHidden = true
+            self.averageVelocityUnitLabel.isHidden = true
+            self.normalAirFlowUnitLabel.isHidden = true
+            self.atmosphericPressureUnitLabel.isHidden = true
+            self.actualAirFlowUnitLabel.isHidden = true
+            self.massAirFlowUnitLabel.isHidden = true
+            self.ductPressureUnitLabel.isHidden = true
+            self.gasDensityUnitLabel.isHidden = true
+            
+            self.averageVelocityResultLabel.isHidden = true
+            self.areaResultLabel.isHidden = true
+            self.normalAirFlowResultLabel.isHidden = true
+            self.gasDensityResultLabel.isHidden = true
+            self.ductPressureResultLabel.isHidden = true
+            self.actualAirFlowResultLabel.isHidden = true
+            self.massAirFlowResultLabel.isHidden = true
+            self.atmosphericPressureResultLabel.isHidden = true
+            self.relativeHumidityResultLabel.isHidden = true
+            
+            
+            
+            self.AirCompositionSwitch.isHidden = false
+            self.wetBulbSwitch.isHidden = false
+            //self.pipeShapeSwitch.isHidden = false
+            self.CO2Label.isHidden = false
+            
+            
+            self.widthTextField.isHidden = false
+            self.heightTextField.isHidden = false
+            self.molecularWeightTextField.isHidden = false
+            self.dryBulbTemperatureTextField.isHidden = false
+            self.staticPressureTextField.isHidden = false
+            self.elevationAboveSeaLevelTextField.isHidden = false
+            self.wetBulbTemperatureTextField.isHidden = false
+            self.pitotTubeCoeffecientTextField.isHidden = false
+            self.pressureAtSeaLevelTextField.isHidden = false
+            self.elevationUnitLabel.isHidden = false
+            
+            
+            self.widthTitle.isHidden = false
+            self.velocityAverageTitle.isHidden = true
+            self.normalAirFlowTitle.isHidden = true
+            self.dryBulbTitle.isHidden = false
+            self.atmoshpericPressureTItle.isHidden = true
+            self.massAirFlowTitle.isHidden = true
+            self.actualAirFlowTitle.isHidden = true
+            self.gasDensityTitle.isHidden = true
+            self.dynamicVelocityTitle.isHidden = false
+            self.ductPressureTitle.isHidden = true
             self.staticPressureTitle.isHidden = false
             self.molecularWeightTitle.isHidden = false
-              self.areaTitle.isHidden = true
-              self.pipeShapeSwitch.isHidden = false
-              self.nonStandardAirSwitchTitle.isHidden = false
-              self.wetBulbSwitchTitle.isHidden = false
-              self.dryBulbTitle.isHidden = false
-              self.seaLevelTitle.isHidden = false
-              self.elevationTitle.isHidden = false
-              self.relativeHumidityTitle.isHidden = true
-              self.pitotTubeTitle.isHidden = false
-              self.pipeShapeTitle.isHidden = false
+            self.areaTitle.isHidden = true
+            self.pipeShapeSwitch.isHidden = false
+            self.nonStandardAirSwitchTitle.isHidden = false
+            self.wetBulbSwitchTitle.isHidden = false
+            self.dryBulbTitle.isHidden = false
+            self.seaLevelTitle.isHidden = false
+            self.elevationTitle.isHidden = false
+            self.relativeHumidityTitle.isHidden = true
+            self.pitotTubeTitle.isHidden = false
+            self.pipeShapeTitle.isHidden = false
             self.wetBulbLabel.isHidden = false
-              self.relativeHumidityUnit.isHidden = true
-                self.elevationUnitLabel.isHidden = false
-                self.heighTitle.isHidden = false
-              self.dynamicVelocityStepper.isHidden = false
-              self.dynamicVelocityLabel.isHidden = false
-              self.dynamicVelocityEditText.isHidden = false
-              self.CO2Label.isHidden = false
-              self.H2OLabel.isHidden = false
-              self.ArLabel.isHidden = false
-              self.N2Label.isHidden = false
-              self.O2LAbel.isHidden = false
+            self.relativeHumidityUnit.isHidden = true
+            self.elevationUnitLabel.isHidden = false
+            self.heighTitle.isHidden = false
+            self.dynamicVelocityStepper.isHidden = false
+            self.dynamicVelocityLabel.isHidden = false
+            self.dynamicVelocityEditText.isHidden = false
+            self.CO2Label.isHidden = false
+            self.H2OLabel.isHidden = false
+            self.ArLabel.isHidden = false
+            self.N2Label.isHidden = false
+            self.O2LAbel.isHidden = false
             self.molecularWeightResultTitle.isHidden = true
-                        self.CO2TextField.isHidden = false
+            self.CO2TextField.isHidden = false
             self.ArTextField.isHidden = false
             self.N2TextField.isHidden = false
             self.H20TextField.isHidden = false
             self.O2TextField.isHidden = false
-                self.dynamicVelocityResult.isHidden = true
-                self.dynamicVelocityResultTitle.isHidden = true
-
-
-
-
-
-   
+            self.dynamicVelocityResult.isHidden = true
+            self.dynamicVelocityResultTitle.isHidden = true
+            
+            
+            
+            
+            
+            
             
             
         case 1:
@@ -625,103 +687,103 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.wetBulbLabel.isHidden = true
             self.elevationUnitLabel.isHidden = true
             self.molecularWeightResultTitle.isHidden = false
-                self.widthUnitLabel.isHidden = true
-                self.heightUnitLabel.isHidden = true
-                self.dryBulbUnitLabel.isHidden = true
-                self.staticPressureUnitLabel.isHidden = true
-                self.pressureSeaLevelUnitLabel.isHidden = true
-                self.wetBulbUnitLabel.isHidden = true
-                self.relativeHumidityUnit.isHidden = false
-                self.areaUnitLabel.isHidden = false
-                self.averageVelocityUnitLabel.isHidden = false
-                self.normalAirFlowUnitLabel.isHidden = false
-                self.atmosphericPressureUnitLabel.isHidden = false
-                self.actualAirFlowUnitLabel.isHidden = false
-                self.massAirFlowUnitLabel.isHidden = false
-                self.ductPressureUnitLabel.isHidden = false
-                self.gasDensityUnitLabel.isHidden = false
-                self.molecularWeightTitle.isHidden = true
-                            self.elevationUnitLabel.isHidden = true
-
-                self.averageVelocityResultLabel.isHidden = false
-                self.areaResultLabel.isHidden = false
-                self.normalAirFlowResultLabel.isHidden = false
-                self.gasDensityResultLabel.isHidden = false
-                self.ductPressureResultLabel.isHidden = false
-                self.actualAirFlowResultLabel.isHidden = false
-                self.massAirFlowResultLabel.isHidden = false
-                self.atmosphericPressureResultLabel.isHidden = false
-                self.relativeHumidityResultLabel.isHidden = false
+            self.widthUnitLabel.isHidden = true
+            self.heightUnitLabel.isHidden = true
+            self.dryBulbUnitLabel.isHidden = true
+            self.staticPressureUnitLabel.isHidden = true
+            self.pressureSeaLevelUnitLabel.isHidden = true
+            self.wetBulbUnitLabel.isHidden = true
+            self.relativeHumidityUnit.isHidden = false
+            self.areaUnitLabel.isHidden = false
+            self.averageVelocityUnitLabel.isHidden = false
+            self.normalAirFlowUnitLabel.isHidden = false
+            self.atmosphericPressureUnitLabel.isHidden = false
+            self.actualAirFlowUnitLabel.isHidden = false
+            self.massAirFlowUnitLabel.isHidden = false
+            self.ductPressureUnitLabel.isHidden = false
+            self.gasDensityUnitLabel.isHidden = false
+            self.molecularWeightTitle.isHidden = true
+            self.elevationUnitLabel.isHidden = true
+            
+            self.averageVelocityResultLabel.isHidden = false
+            self.areaResultLabel.isHidden = false
+            self.normalAirFlowResultLabel.isHidden = false
+            self.gasDensityResultLabel.isHidden = false
+            self.ductPressureResultLabel.isHidden = false
+            self.actualAirFlowResultLabel.isHidden = false
+            self.massAirFlowResultLabel.isHidden = false
+            self.atmosphericPressureResultLabel.isHidden = false
+            self.relativeHumidityResultLabel.isHidden = false
             self.Line2.isHidden = false
             self.Line4.isHidden = false
             
-
-                        self.CO2TextField.isHidden = true
+            
+            self.CO2TextField.isHidden = true
             self.ArTextField.isHidden = true
             self.N2TextField.isHidden = true
             self.H20TextField.isHidden = true
             self.O2TextField.isHidden = true
-
-                self.AirCompositionSwitch.isHidden = true
-                self.wetBulbSwitch.isHidden = true
-           //     self.pipeShapeSwitch.isHidden = true
-                self.CO2Label.isHidden = true
-  
-                
-                self.widthTextField.isHidden = true
-                self.heightTextField.isHidden = true
-                self.molecularWeightTextField.isHidden = true
-                self.dryBulbTemperatureTextField.isHidden = true
-                self.staticPressureTextField.isHidden = true
-                self.elevationAboveSeaLevelTextField.isHidden = true
-                self.wetBulbTemperatureTextField.isHidden = true
-                self.pitotTubeCoeffecientTextField.isHidden = true
-                self.pressureAtSeaLevelTextField.isHidden = true
-                
-             self.widthTitle.isHidden = true
-        self.velocityAverageTitle.isHidden = false
-        self.normalAirFlowTitle.isHidden = false
-        self.dryBulbTitle.isHidden = true
-        self.atmoshpericPressureTItle.isHidden = false
-        self.massAirFlowTitle.isHidden = false
-        self.actualAirFlowTitle.isHidden = false
-        self.gasDensityTitle.isHidden = false
-        self.dynamicVelocityTitle.isHidden = true
-        self.ductPressureTitle.isHidden = false
-
-                        self.staticPressureTitle.isHidden = true
-
-              
-              self.areaTitle.isHidden = false
-              self.pipeShapeSwitch.isHidden = true
-              self.nonStandardAirSwitchTitle.isHidden = true
-              self.wetBulbSwitchTitle.isHidden = true
-              self.dryBulbTitle.isHidden = true
-              self.seaLevelTitle.isHidden = true
-              self.elevationTitle.isHidden = true
-              self.relativeHumidityTitle.isHidden = false
-              self.pitotTubeTitle.isHidden = true
-              self.pipeShapeTitle.isHidden = true
-              self.dynamicVelocityStepper.isHidden = true
-              self.dynamicVelocityLabel.isHidden = true
-              self.dynamicVelocityEditText.isHidden = true
-              self.CO2Label.isHidden = true
-              self.H2OLabel.isHidden = true
-              self.ArLabel.isHidden = true
-              self.N2Label.isHidden = true
-              self.O2LAbel.isHidden = true
+            
+            self.AirCompositionSwitch.isHidden = true
+            self.wetBulbSwitch.isHidden = true
+            //     self.pipeShapeSwitch.isHidden = true
+            self.CO2Label.isHidden = true
+            
+            
+            self.widthTextField.isHidden = true
+            self.heightTextField.isHidden = true
+            self.molecularWeightTextField.isHidden = true
+            self.dryBulbTemperatureTextField.isHidden = true
+            self.staticPressureTextField.isHidden = true
+            self.elevationAboveSeaLevelTextField.isHidden = true
+            self.wetBulbTemperatureTextField.isHidden = true
+            self.pitotTubeCoeffecientTextField.isHidden = true
+            self.pressureAtSeaLevelTextField.isHidden = true
+            
+            self.widthTitle.isHidden = true
+            self.velocityAverageTitle.isHidden = false
+            self.normalAirFlowTitle.isHidden = false
+            self.dryBulbTitle.isHidden = true
+            self.atmoshpericPressureTItle.isHidden = false
+            self.massAirFlowTitle.isHidden = false
+            self.actualAirFlowTitle.isHidden = false
+            self.gasDensityTitle.isHidden = false
+            self.dynamicVelocityTitle.isHidden = true
+            self.ductPressureTitle.isHidden = false
+            
+            self.staticPressureTitle.isHidden = true
+            
+            
+            self.areaTitle.isHidden = false
+            self.pipeShapeSwitch.isHidden = true
+            self.nonStandardAirSwitchTitle.isHidden = true
+            self.wetBulbSwitchTitle.isHidden = true
+            self.dryBulbTitle.isHidden = true
+            self.seaLevelTitle.isHidden = true
+            self.elevationTitle.isHidden = true
+            self.relativeHumidityTitle.isHidden = false
+            self.pitotTubeTitle.isHidden = true
+            self.pipeShapeTitle.isHidden = true
+            self.dynamicVelocityStepper.isHidden = true
+            self.dynamicVelocityLabel.isHidden = true
+            self.dynamicVelocityEditText.isHidden = true
+            self.CO2Label.isHidden = true
+            self.H2OLabel.isHidden = true
+            self.ArLabel.isHidden = true
+            self.N2Label.isHidden = true
+            self.O2LAbel.isHidden = true
             self.dynamicVelocityResult.isHidden = false
             self.dynamicVelocityResultTitle.isHidden = false
-
-     
-    
-    
-
-        
+            
+            
+            
+            
+            
+            
             
         default:
             break
-        
+            
         }
     }
     
@@ -742,6 +804,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var actualAirFlow = Double(actualAirFlowResultLabel.text!)
         var gasDensity = Double(gasDensityResultLabel.text!)
         var ductPressure = Double(ductPressureResultLabel.text!)
+        var area = Double(areaResultLabel.text!)
+        
+        
+        
+        let numberTwoDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 2
+            nf.maximumFractionDigits = 2
+            return nf
+        }()
+        
+        let numberThreeDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 3
+            nf.maximumFractionDigits = 3
+            return nf
+        }()
+        
+        
+        let numberFourDigitsFomatter: NumberFormatter = {
+            let nf = NumberFormatter()
+            nf.numberStyle = .decimal
+            nf.minimumFractionDigits = 4
+            nf.maximumFractionDigits = 4
+            return nf
+        }()
+        
         
         if UnitSwitch.isOn{
             widthUnitLabel.text = "m"
@@ -758,172 +849,189 @@ class ViewController: UIViewController, UITextFieldDelegate {
             actualAirFlowUnitLabel.text = "m^3/h"
             normalAirFlowUnitLabel.text = "Nm^3/h"
             ductPressureUnitLabel.text = "kPa"
+            gasDensityUnitLabel.text = "kg/m^3"
             
             if(widthTextField.text?.isEmpty)!{
             }
             else{
-                widthTextField.text = String(width! / 0.3048)
+                widthTextField.text = numberFourDigitsFomatter.string(from: (width! / 0.3048) as NSNumber)
+                
             }
             if(heightTextField.text?.isEmpty)!{
             }
             else{
-            heightTextField.text = String(height! / 0.3048)
+                heightTextField.text = numberFourDigitsFomatter.string(from: (height! / 0.3048) as NSNumber)
             }
             if(staticPressureTextField.text?.isEmpty)!{
             }
             else{
-            staticPressureTextField.text = String(staticPressure! / 0.2952998751)
+                
+                staticPressureTextField.text = numberTwoDigitsFomatter.string(from: (staticPressure!/0.2952998751) as NSNumber)
+                
+                
             }
             if(dryBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            dryBulbTemperatureTextField.text = String((dryBulbTemperature! - 32) / 1.8)
+                
+                dryBulbTemperatureTextField.text = numberTwoDigitsFomatter.string(from: ((dryBulbTemperature! - 32) / 1.8) as NSNumber)
             }
             if(wetBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            wetBulbTemperatureTextField.text = String((wetBulbTemperature! - 32) / 1.8)
+                wetBulbTemperatureTextField.text = numberTwoDigitsFomatter.string(from: ((wetBulbTemperature! - 32) / 1.8) as NSNumber)
             }
             if(pressureAtSeaLevelTextField.text?.isEmpty)!{
             }
             else{
-            pressureAtSeaLevelTextField.text = String(seaLevelPressure! / 0.2952998751)
+                pressureAtSeaLevelTextField.text = numberTwoDigitsFomatter.string(from: (seaLevelPressure! / 0.2952998751) as NSNumber)
             }
             if(areaResultLabel.text?.isEmpty)!{
             }
             else{
-            areaResultLabel.text = String(width! * 0.3048)
+              //  areaResultLabel.text =  numberThreeDigitsFomatter.string(from: (area! * 0.00064516) as NSNumber)
+                
             }
             if(averageVelocityResultLabel.text?.isEmpty)!{
             }
             else{
-            averageVelocityResultLabel.text = String(averageVelocity! * 12 / 39.3701)
+                averageVelocityResultLabel.text = numberTwoDigitsFomatter.string(from: (averageVelocity! * 12 / 39.3701) as NSNumber)
+                
             }
             if(normalAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
+                normalAirFlowResultLabel.text = String(Int(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15)))))
             }
             if(atmosphericPressureResultLabel.text?.isEmpty)!{
             }
             else{
-            atmosphericPressureResultLabel.text = String(atmosphericPressure! * 0.3048)
+                atmosphericPressureResultLabel.text = numberTwoDigitsFomatter.string(from: (atmosphericPressure! * 0.3048) as NSNumber)
+                
             }
             if(massAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            massAirFlowResultLabel.text = String(massAirFlow! / (2.2046*60))
+                massAirFlowResultLabel.text = numberTwoDigitsFomatter.string(from: (massAirFlow! / (2.2046*60)) as NSNumber)
+                
             }
             if(actualAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            actualAirFlowResultLabel.text = String(actualAirFlow! * 60 / (pow(39.3701 / 12,3)))
+                
+                
+                actualAirFlowResultLabel.text = String(Int(actualAirFlow! * 60 / (pow(39.3701 / 12,3))))
             }
-            if(normalAirFlowResultLabel.text?.isEmpty)!{
-            }
-            else{
-            normalAirFlowResultLabel.text = String(normalAirFlow! / 0.3048)
-            }
+            
             if(ductPressureResultLabel.text?.isEmpty)!{
             }
             else{
-            ductPressureResultLabel.text = String(ductPressure! * 3.38639)
+                ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: (ductPressure! * 3.38639) as NSNumber)
+                
             }
             if(gasDensityResultLabel.text?.isEmpty)!{
             }
             else{
-            gasDensityResultLabel.text = String(gasDensity! * 16.018463)
+                gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: (gasDensity! * 16.018463) as NSNumber)
+                
             }
         }
         else{
-            widthUnitLabel.text = "ft"
-            heightUnitLabel.text = "ft"
+            widthUnitLabel.text = "in"
+            heightUnitLabel.text = "in"
             dryBulbUnitLabel.text = "°F"
-            staticPressureUnitLabel.text = "in. Hg"
+            staticPressureUnitLabel.text = "in Hg"
             wetBulbUnitLabel.text = "°F"
-            pressureSeaLevelUnitLabel.text = "in . Hg"
-            areaUnitLabel.text = "inch ^2"
+            pressureSeaLevelUnitLabel.text = "in Hg"
+            areaUnitLabel.text = "inch^2"
             averageVelocityUnitLabel.text = "ft/s"
             normalAirFlowUnitLabel.text = "SCFM"
             atmosphericPressureUnitLabel.text = "in Hg"
-            massAirFlowUnitLabel.text = "kg/s"
+            massAirFlowUnitLabel.text = "lb/min"
             actualAirFlowUnitLabel.text = "ACFM"
             normalAirFlowUnitLabel.text = "SCFM"
-            
-                  if(widthTextField.text?.isEmpty)!{
+            gasDensityUnitLabel.text = "lb/cu. ft."            
+            if(widthTextField.text?.isEmpty)!{
             }
             else{
-            widthTextField.text = String(width! * 0.3048)
+                widthTextField.text = numberThreeDigitsFomatter.string(from: (width! * 0.3048) as NSNumber)
             }
             if(heightTextField.text?.isEmpty)!{
             }
             else{
-            heightTextField.text = String(height! * 0.3048)
+                heightTextField.text = numberThreeDigitsFomatter.string(from: (height! * 0.3048) as NSNumber)
             }
             if(staticPressureTextField.text?.isEmpty)!{
             }
             else{
-            staticPressureTextField.text = String(staticPressure! * 0.2952998751)
+                staticPressureTextField.text = numberTwoDigitsFomatter.string(from: (staticPressure! * 0.2952998751) as NSNumber)
+                
             }
             if(dryBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            dryBulbTemperatureTextField.text = String((dryBulbTemperature! * 1.8)+32)
+                dryBulbTemperatureTextField.text = numberTwoDigitsFomatter.string(from: ((dryBulbTemperature! * 1.8)+32) as NSNumber)
+                
             }
             if(wetBulbTemperatureTextField.text?.isEmpty)!{
             }
             else{
-            wetBulbTemperatureTextField.text = String((wetBulbTemperature! * 1.8)+32)
+                wetBulbTemperatureTextField.text = numberTwoDigitsFomatter.string(from: ((wetBulbTemperature! * 1.8)+32) as NSNumber)
+                
             }
             if(pressureAtSeaLevelTextField.text?.isEmpty)!{
             }
             else{
-            pressureAtSeaLevelTextField.text = String(seaLevelPressure! * 0.2952998751)
+                pressureAtSeaLevelTextField.text = numberTwoDigitsFomatter.string(from: (seaLevelPressure! * 0.2952998751) as NSNumber)
+                
             }
             if(areaResultLabel.text?.isEmpty)!{
             }
             else{
-            areaResultLabel.text = String(width! / 0.3048)
+        //        areaResultLabel.text =  numberThreeDigitsFomatter.string(from: (area! / 0.00064516) as NSNumber)
+                
             }
             if(averageVelocityResultLabel.text?.isEmpty)!{
             }
             else{
-            averageVelocityResultLabel.text = String(averageVelocity! * 39.3701 / 12)
+                averageVelocityResultLabel.text = numberTwoDigitsFomatter.string(from: (averageVelocity! * 39.3701 / 12) as NSNumber)
+                
             }
             if(normalAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            normalAirFlowResultLabel.text = String(normalAirFlow! * ((pow(39.3701 / 12,3) * (294.26/273.15))) / 60)
+                
+                normalAirFlowResultLabel.text = String(Int(normalAirFlow! * ((pow(39.3701 / 12,3) * (294.26/273.15))) / 60))
             }
             if(atmosphericPressureResultLabel.text?.isEmpty)!{
             }
             else{
-            atmosphericPressureResultLabel.text = String(atmosphericPressure! / 0.3048)
+                atmosphericPressureResultLabel.text = numberTwoDigitsFomatter.string(from: (atmosphericPressure! / 0.3048) as NSNumber)
+                
             }
             if(massAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            massAirFlowResultLabel.text = String(massAirFlow! * (2.2046*60))
+                massAirFlowResultLabel.text = numberTwoDigitsFomatter.string(from: (massAirFlow! * (2.2046*60)) as NSNumber)
+                
             }
             if(actualAirFlowResultLabel.text?.isEmpty)!{
             }
             else{
-            actualAirFlowResultLabel.text = String(actualAirFlow! * (pow(39.3701 / 12,3)) / 60)
+                
+                actualAirFlowResultLabel.text = String(Int(actualAirFlow! * (pow(39.3701 / 12,3)) / 60))
             }
-            if(normalAirFlowResultLabel.text?.isEmpty)!{
-            }
-            else{
-            normalAirFlowResultLabel.text = String(normalAirFlow! * 60 / ((pow(39.3701 / 12,3) * (294.26/273.15))))
-            }
+            
             if(ductPressureResultLabel.text?.isEmpty)!{
             }
             else{
-            ductPressureResultLabel.text = String(ductPressure! / 3.38639)
+                ductPressureResultLabel.text = numberTwoDigitsFomatter.string(from: (ductPressure! / 3.38639) as NSNumber)
+                
             }
             if(gasDensityResultLabel.text?.isEmpty)!{
             }
             else{
-            gasDensityResultLabel.text = String(gasDensity! / 16.018463)
+                gasDensityResultLabel.text = numberFourDigitsFomatter.string(from: (gasDensity! / 16.018463) as NSNumber)
             }
         }
         
@@ -948,12 +1056,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             H2OLabel.isHidden = true
             H20TextField.isHidden = true
             
-            
             CO2TextField.text = "0.03"
             O2TextField.text = "20.81"
             N2TextField.text = "78.09"
             ArTextField.text = "0.93"
-            H20TextField.text = "0.00"        }
+            H20TextField.text = "0.00"
+            
+  
+                }
         else{
             CO2Label.isHidden = false
             CO2TextField.isHidden = false
@@ -966,11 +1076,158 @@ class ViewController: UIViewController, UITextFieldDelegate {
             H2OLabel.isHidden = false
             H20TextField.isHidden = false
             
-            CO2TextField.text = "0.03"
-            O2TextField.text = "20.81"
-            N2TextField.text = "78.09"
-            ArTextField.text = "0.93"
-            H20TextField.text = "0.00"
+            CO2TextField.text = ""
+            O2TextField.text = ""
+            N2TextField.text = ""
+            ArTextField.text = ""
+            H20TextField.text = ""
+            
+            if(pipeShapeSwitch.isOn && wetBulbSwitch.isOn){
+                
+                var frame = CGRect()
+                frame = CO2Label.frame
+                frame.origin.y = 585
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 585
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 620
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 620
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 655
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 655
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 690
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 690
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 725
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 725
+                H20TextField.frame = frame
+                
+                
+                
+            }
+            else if(pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
+                
+                var frame = CGRect()
+                frame = CO2Label.frame
+                frame.origin.y = 539
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 539
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 574
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 574
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 609
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 609
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 644
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 644
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 679
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 679
+                H20TextField.frame = frame
+                
+                
+                
+            }
+            else if(!pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
+                
+            
+                var frame = CGRect()
+                frame = CO2Label.frame
+                frame.origin.y = 585
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 585
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 620
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 620
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 655
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 655
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 690
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 690
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 725
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 725
+                H20TextField.frame = frame
+                
+
+                
+                
+            }
             
             
         }
@@ -979,36 +1236,299 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var wetBulbLabel: UILabel!
     @IBAction func wetBulbEnabled(_ sender: Any) {
         
+        
         if(wetBulbSwitch.isOn){
-            
             wetBulbUnitLabel.isHidden = false
             wetBulbTemperatureTextField.isHidden = false
-            wetBulbLabel.isHidden = false        }
+            wetBulbLabel.isHidden = false
+        }
         else{
             wetBulbUnitLabel.isHidden = true
             wetBulbTemperatureTextField.isHidden = true
             wetBulbLabel.isHidden = true
+        }
+        
+        if(wetBulbSwitch.isOn && pipeShapeSwitch.isOn){
+            
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 539
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 539
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 539
+                wetBulbUnitLabel.frame = frame
+            
+            
+            
+            frame = CO2Label.frame
+            frame.origin.y = 585
+            CO2Label.frame = frame
+            
+            frame = CO2TextField.frame
+            frame.origin.y = 585
+            CO2TextField.frame = frame
+            
+            frame = O2LAbel.frame
+            frame.origin.y = 620
+            O2LAbel.frame = frame
+            
+            frame = O2TextField.frame
+            frame.origin.y = 620
+            O2TextField.frame = frame
+            
+            
+            
+            frame = N2Label.frame
+            frame.origin.y = 655
+            N2Label.frame = frame
+            
+            frame = N2TextField.frame
+            frame.origin.y = 655
+            N2TextField.frame = frame
+            
+            frame = ArLabel.frame
+            frame.origin.y = 690
+            ArLabel.frame = frame
+            
+            frame = ArTextField.frame
+            frame.origin.y = 690
+            ArTextField.frame = frame
+            
+            frame = H2OLabel.frame
+            frame.origin.y = 725
+            H2OLabel.frame = frame
+            
+            frame = H20TextField.frame
+            frame.origin.y = 725
+            H20TextField.frame = frame
+            
+
+            
+            
+            }
+        else if(wetBulbSwitch.isOn && !pipeShapeSwitch.isOn){
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 585
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 585
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 585
+                wetBulbUnitLabel.frame = frame
+            
+            var frame = CGRect()
+            frame = CO2Label.frame
+            frame.origin.y = 5
+            CO2Label.frame = frame
+            
+            frame = CO2TextField.frame
+            frame.origin.y = 585
+            CO2TextField.frame = frame
+            
+            frame = O2LAbel.frame
+            frame.origin.y = 620
+            O2LAbel.frame = frame
+            
+            frame = O2TextField.frame
+            frame.origin.y = 620
+            O2TextField.frame = frame
+            
+            
+            
+            frame = N2Label.frame
+            frame.origin.y = 655
+            N2Label.frame = frame
+            
+            frame = N2TextField.frame
+            frame.origin.y = 655
+            N2TextField.frame = frame
+            
+            frame = ArLabel.frame
+            frame.origin.y = 690
+            ArLabel.frame = frame
+            
+            frame = ArTextField.frame
+            frame.origin.y = 690
+            ArTextField.frame = frame
+            
+            frame = H2OLabel.frame
+            frame.origin.y = 725
+            H2OLabel.frame = frame
+            
+            frame = H20TextField.frame
+            frame.origin.y = 725
+            H20TextField.frame = frame
+            
+            
+            
+
+            }
+    
+        else if(!wetBulbSwitch.isOn && !pipeShapeSwitch.isOn){
+             var frame = CGRect()
+            frame = CO2Label.frame
+            frame.origin.y = 585
+            CO2Label.frame = frame
+            
+            frame = CO2TextField.frame
+            frame.origin.y = 585
+            CO2TextField.frame = frame
+            
+            frame = O2LAbel.frame
+            frame.origin.y = 620
+            O2LAbel.frame = frame
+            
+            frame = O2TextField.frame
+            frame.origin.y = 620
+            O2TextField.frame = frame
+            
+            
+            
+            frame = N2Label.frame
+            frame.origin.y = 655
+            N2Label.frame = frame
+            
+            frame = N2TextField.frame
+            frame.origin.y = 655
+            N2TextField.frame = frame
+            
+            frame = ArLabel.frame
+            frame.origin.y = 690
+            ArLabel.frame = frame
+            
+            frame = ArTextField.frame
+            frame.origin.y = 690
+            ArTextField.frame = frame
+            
+            frame = H2OLabel.frame
+            frame.origin.y = 725
+            H2OLabel.frame = frame
+            
+            frame = H20TextField.frame
+            frame.origin.y = 725
+            H20TextField.frame = frame
+            
             
             
         }
-        
-    }
+    else if(!wetBulbSwitch.isOn && pipeShapeSwitch.isOn){
+              var frame = CGRect()
+            frame = CO2Label.frame
+            frame.origin.y = 539
+            CO2Label.frame = frame
+            
+            frame = CO2TextField.frame
+            frame.origin.y = 539
+            CO2TextField.frame = frame
+            
+            frame = O2LAbel.frame
+            frame.origin.y = 574
+            O2LAbel.frame = frame
+            
+            frame = O2TextField.frame
+            frame.origin.y = 574
+            O2TextField.frame = frame
+            
+            
+            
+            frame = N2Label.frame
+            frame.origin.y = 609
+            N2Label.frame = frame
+            
+            frame = N2TextField.frame
+            frame.origin.y = 609
+            N2TextField.frame = frame
+            
+            frame = ArLabel.frame
+            frame.origin.y = 644
+            ArLabel.frame = frame
+            
+            frame = ArTextField.frame
+            frame.origin.y = 644
+            ArTextField.frame = frame
+            
+            frame = H2OLabel.frame
+            frame.origin.y = 679
+            H2OLabel.frame = frame
+            
+            frame = H20TextField.frame
+            frame.origin.y = 679
+            H20TextField.frame = frame
+            
     
+        }
+    }
+
     @IBAction func pipeShape(_ sender: Any) {
         
         if(pipeShapeSwitch.isOn){
-            widthUnitLabel.text = "Diameter"
-            heighTitle.isHidden = true
-            heightTextField.isHidden = true
-            heightUnitLabel.isHidden = true
+            heighTitle.text = "Diameter"
+            widthTitle.isHidden = true
+            widthTextField.isHidden = true
+            widthUnitLabel.isHidden = true
+            if(wetBulbSwitch.isOn){
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 539
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 539
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 539
+                wetBulbUnitLabel.frame = frame
+                
+            }
+            else{
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 585
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 585
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 585
+                wetBulbUnitLabel.frame = frame
+            }
         }
         else{
-            widthUnitLabel.text = "Width"
-            heighTitle.isHidden = false
-            heightTextField.isHidden = false
-            heightUnitLabel.isHidden = false
-        }
+            heighTitle.text = "Height"
+            widthTextField.isHidden = false
+            widthTitle.isHidden = false
+            widthUnitLabel.isHidden = false
+            if(wetBulbSwitch.isOn){
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 585
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 585
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 585
+                wetBulbUnitLabel.frame = frame
+                
             }
+            else{
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 539
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 539
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 539
+                wetBulbUnitLabel.frame = frame            }
+
+        }
+    }
     
     //Dynamic Velocity
     
@@ -1038,35 +1558,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
             oldValue = oldValue - 1
             
             if(dynamicPresureArray.count > 0){
-            dynamicPresureArray.removeLast()
+                dynamicPresureArray.removeLast()
             }
             var dynamicPressureArrayString = ""
             for dynamicPressure in dynamicPresureArray {
-                dynamicPressureArrayString += String(dynamicPressure) 
+                dynamicPressureArrayString += String(dynamicPressure)
             }
             dynamicVelocityLabel.text = dynamicPressureArrayString        }
         
     }
     
- 
+    
     var oldValue : Double = 0.0
     func dismissKeyboard() {
         widthTextField.resignFirstResponder()
     }
     
-     func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         widthTextField.resignFirstResponder()
         return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        widthTextField.delegate = self
+        
+      
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard")))
         dynamicVelocityStepper.wraps = false
         dynamicVelocityStepper.autorepeat = false
@@ -1075,54 +1596,54 @@ class ViewController: UIViewController, UITextFieldDelegate {
         wetBulbSwitch.setOn(false,animated: false)
         AirCompositionSwitch.setOn(false,animated: false)
         pipeShapeSwitch.setOn(false, animated: false)
-    
+        
         oldValue = dynamicVelocityStepper.value
-         self.widthUnitLabel.isHidden = false
-                self.heightUnitLabel.isHidden = false
-                self.dryBulbUnitLabel.isHidden = false
-                self.staticPressureUnitLabel.isHidden = false
-                self.pressureSeaLevelUnitLabel.isHidden = false
-                self.wetBulbUnitLabel.isHidden = false
-                
-                self.areaUnitLabel.isHidden = true
-                self.averageVelocityUnitLabel.isHidden = true
-                self.normalAirFlowUnitLabel.isHidden = true
-                self.atmosphericPressureUnitLabel.isHidden = true
-                self.actualAirFlowUnitLabel.isHidden = true
-                self.massAirFlowUnitLabel.isHidden = true
-                self.ductPressureUnitLabel.isHidden = true
-                self.gasDensityUnitLabel.isHidden = true
-                
-                self.averageVelocityResultLabel.isHidden = true
-                self.areaResultLabel.isHidden = true
-                self.normalAirFlowResultLabel.isHidden = true
-                self.gasDensityResultLabel.isHidden = true
-                self.ductPressureResultLabel.isHidden = true
-                self.actualAirFlowResultLabel.isHidden = true
-                self.massAirFlowResultLabel.isHidden = true
-                self.atmosphericPressureResultLabel.isHidden = true
-                self.relativeHumidityResultLabel.isHidden = true
-                
-                
-                
-                self.AirCompositionSwitch.isHidden = false
-                self.wetBulbSwitch.isHidden = false
-                //self.pipeShapeSwitch.isHidden = false
-                self.CO2Label.isHidden = false
-  
-                
-                self.widthTextField.isHidden = false
-                self.heightTextField.isHidden = false
-                self.molecularWeightTextField.isHidden = false
-                self.dryBulbTemperatureTextField.isHidden = false
-                self.staticPressureTextField.isHidden = false
-                self.elevationAboveSeaLevelTextField.isHidden = false
-                self.wetBulbTemperatureTextField.isHidden = false
-                self.pitotTubeCoeffecientTextField.isHidden = false
-                self.pressureAtSeaLevelTextField.isHidden = false
-                            self.elevationUnitLabel.isHidden = false
-
-                
+        self.widthUnitLabel.isHidden = false
+        self.heightUnitLabel.isHidden = false
+        self.dryBulbUnitLabel.isHidden = false
+        self.staticPressureUnitLabel.isHidden = false
+        self.pressureSeaLevelUnitLabel.isHidden = false
+        self.wetBulbUnitLabel.isHidden = true
+        
+        self.areaUnitLabel.isHidden = true
+        self.averageVelocityUnitLabel.isHidden = true
+        self.normalAirFlowUnitLabel.isHidden = true
+        self.atmosphericPressureUnitLabel.isHidden = true
+        self.actualAirFlowUnitLabel.isHidden = true
+        self.massAirFlowUnitLabel.isHidden = true
+        self.ductPressureUnitLabel.isHidden = true
+        self.gasDensityUnitLabel.isHidden = true
+        
+        self.averageVelocityResultLabel.isHidden = true
+        self.areaResultLabel.isHidden = true
+        self.normalAirFlowResultLabel.isHidden = true
+        self.gasDensityResultLabel.isHidden = true
+        self.ductPressureResultLabel.isHidden = true
+        self.actualAirFlowResultLabel.isHidden = true
+        self.massAirFlowResultLabel.isHidden = true
+        self.atmosphericPressureResultLabel.isHidden = true
+        self.relativeHumidityResultLabel.isHidden = true
+        
+        
+        
+        self.AirCompositionSwitch.isHidden = false
+        self.wetBulbSwitch.isHidden = false
+        //self.pipeShapeSwitch.isHidden = false
+        self.CO2Label.isHidden = false
+        
+        
+        self.widthTextField.isHidden = false
+        self.heightTextField.isHidden = false
+        self.molecularWeightTextField.isHidden = false
+        self.dryBulbTemperatureTextField.isHidden = false
+        self.staticPressureTextField.isHidden = false
+        self.elevationAboveSeaLevelTextField.isHidden = false
+        self.wetBulbTemperatureTextField.isHidden = true
+        self.pitotTubeCoeffecientTextField.isHidden = false
+        self.pressureAtSeaLevelTextField.isHidden = false
+        self.elevationUnitLabel.isHidden = false
+        
+        
         self.widthTitle.isHidden = false
         self.velocityAverageTitle.isHidden = true
         self.normalAirFlowTitle.isHidden = true
@@ -1133,36 +1654,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.gasDensityTitle.isHidden = true
         self.dynamicVelocityTitle.isHidden = false
         self.ductPressureTitle.isHidden = true
-            self.staticPressureTitle.isHidden = false
-            self.molecularWeightTitle.isHidden = false
-              self.areaTitle.isHidden = true
-              self.pipeShapeSwitch.isHidden = false
-              self.nonStandardAirSwitchTitle.isHidden = false
-              self.wetBulbSwitchTitle.isHidden = false
-              self.dryBulbTitle.isHidden = false
-              self.seaLevelTitle.isHidden = false
-              self.elevationTitle.isHidden = false
-              self.relativeHumidityTitle.isHidden = true
-              self.pitotTubeTitle.isHidden = false
-              self.pipeShapeTitle.isHidden = false
-            self.wetBulbLabel.isHidden = false
-              self.relativeHumidityUnit.isHidden = true
-                self.elevationUnitLabel.isHidden = false
-                self.heighTitle.isHidden = false
-              self.dynamicVelocityStepper.isHidden = false
-              self.dynamicVelocityLabel.isHidden = false
-              self.dynamicVelocityEditText.isHidden = false
-              self.CO2Label.isHidden = false
-              self.H2OLabel.isHidden = false
-              self.ArLabel.isHidden = false
-              self.N2Label.isHidden = false
-              self.O2LAbel.isHidden = false
-            self.molecularWeightResultTitle.isHidden = true
-                        self.CO2TextField.isHidden = false
-            self.ArTextField.isHidden = false
-            self.N2TextField.isHidden = false
-            self.H20TextField.isHidden = false
-            self.O2TextField.isHidden = false
+        self.staticPressureTitle.isHidden = false
+        self.molecularWeightTitle.isHidden = false
+        self.areaTitle.isHidden = true
+        self.pipeShapeSwitch.isHidden = false
+        self.nonStandardAirSwitchTitle.isHidden = false
+        self.wetBulbSwitchTitle.isHidden = false
+        self.dryBulbTitle.isHidden = false
+        self.seaLevelTitle.isHidden = false
+        self.elevationTitle.isHidden = false
+        self.relativeHumidityTitle.isHidden = true
+        self.pitotTubeTitle.isHidden = false
+        self.pipeShapeTitle.isHidden = false
+        self.wetBulbLabel.isHidden = true
+        self.relativeHumidityUnit.isHidden = true
+        self.elevationUnitLabel.isHidden = false
+        self.heighTitle.isHidden = false
+        self.dynamicVelocityStepper.isHidden = false
+        self.dynamicVelocityLabel.isHidden = false
+        self.dynamicVelocityEditText.isHidden = false
+        self.CO2Label.isHidden = false
+        self.H2OLabel.isHidden = false
+        self.ArLabel.isHidden = false
+        self.N2Label.isHidden = false
+        self.O2LAbel.isHidden = false
+        self.molecularWeightResultTitle.isHidden = true
+        self.CO2TextField.isHidden = false
+        self.ArTextField.isHidden = false
+        self.N2TextField.isHidden = false
+        self.H20TextField.isHidden = false
+        self.O2TextField.isHidden = false
         self.dynamicVelocityResult.isHidden = true
         self.dynamicVelocityResultTitle.isHidden = true
         var dynamicPressureArrayString = ""
@@ -1171,10 +1692,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         dynamicVelocityLabel.text = dynamicPressureArrayString
         
-}
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
-    
+
