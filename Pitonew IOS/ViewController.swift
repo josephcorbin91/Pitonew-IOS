@@ -1044,6 +1044,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var O2LAbel: UILabel!
     
     @IBAction func standardAirSwitch(_ sender: Any) {
+       // var frame = CGRect()
         if(AirCompositionSwitch.isOn){
             CO2Label.isHidden = true
             CO2TextField.isHidden = true
@@ -1061,9 +1062,75 @@ class ViewController: UIViewController, UITextFieldDelegate {
             N2TextField.text = "78.09"
             ArTextField.text = "0.93"
             H20TextField.text = "0.00"
+            var frame = CGRect()
+            if(pipeShapeSwitch.isOn && wetBulbSwitch.isOn){
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 631
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 668
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 668
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 606
+                dynamicVelocityLabel.frame = frame
+                
+                
+                
+            }
+            else if(pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 539
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 576
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 576
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 606
+                dynamicVelocityLabel.frame = frame
+
+            }
+            else if(!pipeShapeSwitch.isOn && wetBulbSwitch.isOn){
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 631
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 668
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 668
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 606
+                dynamicVelocityLabel.frame = frame            }
+                
+
+            else if(!pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 585
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 622
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 622
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 652
+                dynamicVelocityLabel.frame = frame
+         }
+    
+        }
+    
+            
             
   
-                }
+                
         else{
             CO2Label.isHidden = false
             CO2TextField.isHidden = false
@@ -1127,9 +1194,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame.origin.y = 725
                 H20TextField.frame = frame
                 
+               
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 773
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 810
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 810
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 840
+                    dynamicVelocityLabel.frame = frame
+                    
+                    
+                    
+                }
+            
                 
                 
-            }
+            
             else if(pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
                 
                 var frame = CGRect()
@@ -1175,9 +1260,88 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame.origin.y = 679
                 H20TextField.frame = frame
                 
-                
-                
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 727
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 763
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 763
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 793
+                dynamicVelocityLabel.frame = frame
             }
+                
+            else if(!pipeShapeSwitch.isOn && wetBulbSwitch.isOn){
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 585
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 585
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 585
+                wetBulbUnitLabel.frame = frame
+                
+                frame = CO2Label.frame
+                frame.origin.y = 631
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 631
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 666
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 666
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 701
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 701
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 736
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 736
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 771
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 771
+                H20TextField.frame = frame
+                
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 819
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 855
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 855
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 885
+                dynamicVelocityLabel.frame = frame
+            }
+
             else if(!pipeShapeSwitch.isOn && !wetBulbSwitch.isOn){
                 
             
@@ -1224,6 +1388,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame.origin.y = 725
                 H20TextField.frame = frame
                 
+                
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 773
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 809
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 809
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 839
+                dynamicVelocityLabel.frame = frame
+                
 
                 
                 
@@ -1247,83 +1425,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
             wetBulbTemperatureTextField.isHidden = true
             wetBulbLabel.isHidden = true
         }
-        
-        if(wetBulbSwitch.isOn && pipeShapeSwitch.isOn){
-            
-                var frame = CGRect()
-                frame = wetBulbLabel.frame
-                frame.origin.y = 539
-                wetBulbLabel.frame = frame
-                frame = wetBulbTemperatureTextField.frame
-                frame.origin.y = 539
-                wetBulbTemperatureTextField.frame = frame
-                frame = wetBulbUnitLabel.frame
-                frame.origin.y = 539
-                wetBulbUnitLabel.frame = frame
-            
-            
-            
-            frame = CO2Label.frame
-            frame.origin.y = 585
-            CO2Label.frame = frame
-            
-            frame = CO2TextField.frame
-            frame.origin.y = 585
-            CO2TextField.frame = frame
-            
-            frame = O2LAbel.frame
-            frame.origin.y = 620
-            O2LAbel.frame = frame
-            
-            frame = O2TextField.frame
-            frame.origin.y = 620
-            O2TextField.frame = frame
-            
-            
-            
-            frame = N2Label.frame
-            frame.origin.y = 655
-            N2Label.frame = frame
-            
-            frame = N2TextField.frame
-            frame.origin.y = 655
-            N2TextField.frame = frame
-            
-            frame = ArLabel.frame
-            frame.origin.y = 690
-            ArLabel.frame = frame
-            
-            frame = ArTextField.frame
-            frame.origin.y = 690
-            ArTextField.frame = frame
-            
-            frame = H2OLabel.frame
-            frame.origin.y = 725
-            H2OLabel.frame = frame
-            
-            frame = H20TextField.frame
-            frame.origin.y = 725
-            H20TextField.frame = frame
-            
-
-            
-            
-            }
-        else if(wetBulbSwitch.isOn && !pipeShapeSwitch.isOn){
-                var frame = CGRect()
-                frame = wetBulbLabel.frame
-                frame.origin.y = 585
-                wetBulbLabel.frame = frame
-                frame = wetBulbTemperatureTextField.frame
-                frame.origin.y = 585
-                wetBulbTemperatureTextField.frame = frame
-                frame = wetBulbUnitLabel.frame
-                frame.origin.y = 585
-                wetBulbUnitLabel.frame = frame
+     
+        else if(wetBulbSwitch.isOn && pipeShapeSwitch.isOn && AirCompositionSwitch.isOn ){
             
             var frame = CGRect()
+            frame = wetBulbLabel.frame
+            frame.origin.y = 539
+            wetBulbLabel.frame = frame
+            frame = wetBulbTemperatureTextField.frame
+            frame.origin.y = 539
+            wetBulbTemperatureTextField.frame = frame
+            frame = wetBulbUnitLabel.frame
+            frame.origin.y = 539
+            wetBulbUnitLabel.frame = frame
+            
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 631
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 667
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 667
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 697
+            dynamicVelocityLabel.frame = frame
+            
+        }
+        else if(wetBulbSwitch.isOn && pipeShapeSwitch.isOn && !AirCompositionSwitch.isOn ){
+   
+            
+            
+            var frame = CGRect()
+            frame = wetBulbLabel.frame
+            frame.origin.y = 539
+            wetBulbLabel.frame = frame
+            frame = wetBulbTemperatureTextField.frame
+            frame.origin.y = 539
+            wetBulbTemperatureTextField.frame = frame
+            frame = wetBulbUnitLabel.frame
+            frame.origin.y = 539
+            wetBulbUnitLabel.frame = frame
+            
             frame = CO2Label.frame
-            frame.origin.y = 5
+            frame.origin.y = 585
             CO2Label.frame = frame
             
             frame = CO2TextField.frame
@@ -1365,12 +1512,139 @@ class ViewController: UIViewController, UITextFieldDelegate {
             H20TextField.frame = frame
             
             
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 773
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 810
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 810
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 840
+            dynamicVelocityLabel.frame = frame
+            
+        }
+            
+        else if(wetBulbSwitch.isOn && !pipeShapeSwitch.isOn && AirCompositionSwitch.isOn){
+                var frame = CGRect()
+                frame = wetBulbLabel.frame
+                frame.origin.y = 585
+                wetBulbLabel.frame = frame
+                frame = wetBulbTemperatureTextField.frame
+                frame.origin.y = 585
+                wetBulbTemperatureTextField.frame = frame
+                frame = wetBulbUnitLabel.frame
+                frame.origin.y = 585
+                wetBulbUnitLabel.frame = frame
+            
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 631
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 667
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 667
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 697
+            dynamicVelocityLabel.frame = frame
+        }
+            
+        else if(wetBulbSwitch.isOn && !pipeShapeSwitch.isOn && !AirCompositionSwitch.isOn){
+            var frame = CGRect()
+            frame = wetBulbLabel.frame
+            frame.origin.y = 585
+            wetBulbLabel.frame = frame
+            frame = wetBulbTemperatureTextField.frame
+            frame.origin.y = 585
+            wetBulbTemperatureTextField.frame = frame
+            frame = wetBulbUnitLabel.frame
+            frame.origin.y = 585
+            wetBulbUnitLabel.frame = frame
+            
+            frame = CO2Label.frame
+            frame.origin.y = 631
+            CO2Label.frame = frame
+            
+            frame = CO2TextField.frame
+            frame.origin.y = 631
+            CO2TextField.frame = frame
+            
+            frame = O2LAbel.frame
+            frame.origin.y = 666
+            O2LAbel.frame = frame
+            
+            frame = O2TextField.frame
+            frame.origin.y = 666
+            O2TextField.frame = frame
+            
+            
+            
+            frame = N2Label.frame
+            frame.origin.y = 701
+            N2Label.frame = frame
+            
+            frame = N2TextField.frame
+            frame.origin.y = 701
+            N2TextField.frame = frame
+            
+            frame = ArLabel.frame
+            frame.origin.y = 736
+            ArLabel.frame = frame
+            
+            frame = ArTextField.frame
+            frame.origin.y = 736
+            ArTextField.frame = frame
+            
+            frame = H2OLabel.frame
+            frame.origin.y = 771
+            H2OLabel.frame = frame
+            
+            frame = H20TextField.frame
+            frame.origin.y = 771
+            H20TextField.frame = frame
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 819
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 856
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 856
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 886
+            dynamicVelocityLabel.frame = frame
+        }
+            
+    
+        else if(!wetBulbSwitch.isOn && !pipeShapeSwitch.isOn && AirCompositionSwitch.isOn){
+             var frame = CGRect()
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 585
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 622
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 622
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 652
+            dynamicVelocityLabel.frame = frame
             
 
-            }
-    
-        else if(!wetBulbSwitch.isOn && !pipeShapeSwitch.isOn){
-             var frame = CGRect()
+            
+            
+        }
+        else if(!wetBulbSwitch.isOn && !pipeShapeSwitch.isOn && !AirCompositionSwitch.isOn){
+            var frame = CGRect()
             frame = CO2Label.frame
             frame.origin.y = 585
             CO2Label.frame = frame
@@ -1412,12 +1686,53 @@ class ViewController: UIViewController, UITextFieldDelegate {
             frame = H20TextField.frame
             frame.origin.y = 725
             H20TextField.frame = frame
+            
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 773
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 622
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 622
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 652
+            dynamicVelocityLabel.frame = frame
+            
+            
+            
             
             
             
         }
-    else if(!wetBulbSwitch.isOn && pipeShapeSwitch.isOn){
+            
+            
+    else if(!wetBulbSwitch.isOn && pipeShapeSwitch.isOn && AirCompositionSwitch.isOn){
               var frame = CGRect()
+            
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 585
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 622
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 622
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 652
+            dynamicVelocityLabel.frame = frame
+            
+            
+            
+            
+        }
+        
+        else if(!wetBulbSwitch.isOn && pipeShapeSwitch.isOn && AirCompositionSwitch.isOn){
+            var frame = CGRect()
             frame = CO2Label.frame
             frame.origin.y = 539
             CO2Label.frame = frame
@@ -1460,7 +1775,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
             frame.origin.y = 679
             H20TextField.frame = frame
             
-    
+            
+            frame = dynamicVelocityTitle.frame
+            frame.origin.y = 773
+            dynamicVelocityTitle.frame = frame
+            frame = dynamicVelocityEditText.frame
+            frame.origin.y = 622
+            dynamicVelocityEditText.frame = frame
+            frame = dynamicVelocityStepper.frame
+            frame.origin.y = 622
+            dynamicVelocityStepper.frame = frame
+            frame = dynamicVelocityLabel.frame
+            frame.origin.y = 652
+            dynamicVelocityLabel.frame = frame
+            
+            
+            
         }
     }
 
@@ -1471,7 +1801,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             widthTitle.isHidden = true
             widthTextField.isHidden = true
             widthUnitLabel.isHidden = true
-            if(wetBulbSwitch.isOn){
+            if(wetBulbSwitch.isOn ){
                 var frame = CGRect()
                 frame = wetBulbLabel.frame
                 frame.origin.y = 539
@@ -1482,6 +1812,92 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame = wetBulbUnitLabel.frame
                 frame.origin.y = 539
                 wetBulbUnitLabel.frame = frame
+                frame = CO2Label.frame
+                frame.origin.y = 585
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 585
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 620
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 620
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 655
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 655
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 690
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 690
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 725
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 725
+                H20TextField.frame = frame
+                
+                if(AirCompositionSwitch.isOn){
+                frame = dynamicVelocityTitle.frame
+                frame.origin.y = 585
+                dynamicVelocityTitle.frame = frame
+                frame = dynamicVelocityEditText.frame
+                frame.origin.y = 622
+                dynamicVelocityEditText.frame = frame
+                frame = dynamicVelocityStepper.frame
+                frame.origin.y = 622
+                dynamicVelocityStepper.frame = frame
+                frame = dynamicVelocityLabel.frame
+                frame.origin.y = 652
+                dynamicVelocityLabel.frame = frame
+                    
+                    
+                    
+                }
+                else{
+                    
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 585
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 622
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 622
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 652
+                    dynamicVelocityLabel.frame = frame
+                    
+                }
+                
+                
+                
+                
+                
+                
+
+                
+                
+                
+                
                 
             }
             else{
@@ -1495,6 +1911,85 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame = wetBulbUnitLabel.frame
                 frame.origin.y = 585
                 wetBulbUnitLabel.frame = frame
+                
+                frame = CO2Label.frame
+                frame.origin.y = 539
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 539
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 574
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 574
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 609
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 609
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 644
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 644
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 679
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 679
+                H20TextField.frame = frame
+                
+                
+                if(AirCompositionSwitch.isOn){
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 585
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 622
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 622
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 652
+                    dynamicVelocityLabel.frame = frame
+                    
+                    
+                    
+                }
+                else{
+                    
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 819
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 855
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 855
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 885
+                    dynamicVelocityLabel.frame = frame
+                    
+                }
+                
+
             }
         }
         else{
@@ -1514,6 +2009,89 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 frame.origin.y = 585
                 wetBulbUnitLabel.frame = frame
                 
+                
+                frame = CO2Label.frame
+                frame.origin.y = 631
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 631
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 666
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 666
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 701
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 701
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 736
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 736
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 771
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 771
+                H20TextField.frame = frame
+                
+                
+                
+                
+                if(AirCompositionSwitch.isOn){
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 585
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 622
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 622
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 652
+                    dynamicVelocityLabel.frame = frame
+                    
+                    
+                    
+                }
+                else{
+                    
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 819
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 855
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 855
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 885
+                    dynamicVelocityLabel.frame = frame
+                    
+                }
+                
+
+                
+                
             }
             else{
                 var frame = CGRect()
@@ -1525,9 +2103,95 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 wetBulbTemperatureTextField.frame = frame
                 frame = wetBulbUnitLabel.frame
                 frame.origin.y = 539
-                wetBulbUnitLabel.frame = frame            }
+                wetBulbUnitLabel.frame = frame
+                
+                
+                frame = CO2Label.frame
+                frame.origin.y = 585
+                CO2Label.frame = frame
+                
+                frame = CO2TextField.frame
+                frame.origin.y = 585
+                CO2TextField.frame = frame
+                
+                frame = O2LAbel.frame
+                frame.origin.y = 620
+                O2LAbel.frame = frame
+                
+                frame = O2TextField.frame
+                frame.origin.y = 620
+                O2TextField.frame = frame
+                
+                
+                
+                frame = N2Label.frame
+                frame.origin.y = 655
+                N2Label.frame = frame
+                
+                frame = N2TextField.frame
+                frame.origin.y = 655
+                N2TextField.frame = frame
+                
+                frame = ArLabel.frame
+                frame.origin.y = 690
+                ArLabel.frame = frame
+                
+                frame = ArTextField.frame
+                frame.origin.y = 690
+                ArTextField.frame = frame
+                
+                frame = H2OLabel.frame
+                frame.origin.y = 725
+                H2OLabel.frame = frame
+                
+                frame = H20TextField.frame
+                frame.origin.y = 725
+                H20TextField.frame = frame
+                
+                
+                if(AirCompositionSwitch.isOn){
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 585
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 622
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 622
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 652
+                    dynamicVelocityLabel.frame = frame
+                    
+                    
+                    
+                }
+                else{
+                    
+                    frame = dynamicVelocityTitle.frame
+                    frame.origin.y = 819
+                    dynamicVelocityTitle.frame = frame
+                    frame = dynamicVelocityEditText.frame
+                    frame.origin.y = 855
+                    dynamicVelocityEditText.frame = frame
+                    frame = dynamicVelocityStepper.frame
+                    frame.origin.y = 855
+                    dynamicVelocityStepper.frame = frame
+                    frame = dynamicVelocityLabel.frame
+                    frame.origin.y = 885
+                    dynamicVelocityLabel.frame = frame
+                    
+                }
+                
+
+                
+            
+            
+            }
 
         }
+        
+        
     }
     
     //Dynamic Velocity
@@ -1690,6 +2354,51 @@ class ViewController: UIViewController, UITextFieldDelegate {
         for dynamicPressure in dynamicPresureArray {
             dynamicPressureArrayString += String(dynamicPressure)
         }
+        var frame = CGRect()
+
+        
+        frame = CO2Label.frame
+        frame.origin.y = 585
+        CO2Label.frame = frame
+        
+        frame = CO2TextField.frame
+        frame.origin.y = 585
+        CO2TextField.frame = frame
+        
+        frame = O2LAbel.frame
+        frame.origin.y = 620
+        O2LAbel.frame = frame
+        
+        frame = O2TextField.frame
+        frame.origin.y = 620
+        O2TextField.frame = frame
+        
+        
+        
+        frame = N2Label.frame
+        frame.origin.y = 655
+        N2Label.frame = frame
+        
+        frame = N2TextField.frame
+        frame.origin.y = 655
+        N2TextField.frame = frame
+        
+        frame = ArLabel.frame
+        frame.origin.y = 690
+        ArLabel.frame = frame
+        
+        frame = ArTextField.frame
+        frame.origin.y = 690
+        ArTextField.frame = frame
+        
+        frame = H2OLabel.frame
+        frame.origin.y = 725
+        H2OLabel.frame = frame
+        
+        frame = H20TextField.frame
+        frame.origin.y = 725
+        H20TextField.frame = frame
+
         dynamicVelocityLabel.text = dynamicPressureArrayString
         
     }
