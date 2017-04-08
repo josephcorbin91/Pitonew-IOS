@@ -697,9 +697,10 @@
                         <outlet property="ArTextField" destination="Hkp-jv-WPy" id="b1H-Jb-LkQ"/>
                         <outlet property="CO2Label" destination="Gq7-fU-Do4" id="Dhq-6V-llM"/>
                         <outlet property="CO2TextField" destination="FTu-WU-xNL" id="JiM-dJ-zG1"/>
+                        <outlet property="Divider1" destination="kuR-oE-EhP" id="xPc-fA-cIm"/>
+                        <outlet property="Divider2" destination="RJm-pI-X6O" id="Qbg-VQ-o4F"/>
                         <outlet property="H20TextField" destination="nnZ-cd-DBO" id="ebk-mz-nv2"/>
                         <outlet property="H2OLabel" destination="Lhl-Su-iBB" id="jSc-D0-lQ5"/>
-                        <outlet property="Line13" destination="kuR-oE-EhP" id="Rbf-Im-UuA"/>
                         <outlet property="Line2" destination="MJ3-8R-tZ7" id="Tf8-wO-slb"/>
                         <outlet property="Line4" destination="gjA-CJ-8fn" id="bEx-vD-pYj"/>
                         <outlet property="N2Label" destination="Rtf-P3-bBD" id="hzq-Z6-Yjz"/>
